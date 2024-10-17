@@ -1305,6 +1305,8 @@
         /* Ensure it is above other content */
         width: calc(100% - 20px);
         /* Full width with some padding */
+
+        background-color: #fa9db7;
     }
 
     .apply-btn {
@@ -1314,6 +1316,10 @@
         /* Adjust padding for a comfortable touch target */
         font-size: 16px;
         /* Ensure button text is legible */
+    }
+
+    .nav-apply-btn .apply-btn{
+        background-color: #fa9db7;
     }
 
 
@@ -2334,10 +2340,14 @@
 
     }
 
+    .nav-apply-btn .apply-btn{
+        background-color: #fa9db7;
+    }
+
     .apply-btn {
         width: 100%;
         /* Make the button full-width on mobile */
-        background-color: #fa9db7;
+       
 
     }
 
@@ -3270,7 +3280,7 @@
     }
 
     .enroll-btn .apply-btn {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .cta-section-img-wave {
