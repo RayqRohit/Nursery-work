@@ -2374,7 +2374,7 @@
     /* about school */
 
     #about-school {
-        padding: 20px 20px;
+        padding: 20px 0;
         /* Reduce padding for smaller screens */
     }
 
@@ -2555,7 +2555,7 @@
     /* why choose section */
 
     #why-choose {
-        padding-inline: 20px;
+        padding-inline: 0;
         /* Adjust padding */
         padding-bottom: 4rem;
     }
@@ -2659,7 +2659,7 @@
 
     /* numbers section */
     #numbers {
-        padding: 3rem 20px;
+        padding: 3rem 0;
         /* Adjust padding for mobile */
     }
 
@@ -2712,7 +2712,7 @@
     /* offering section */
 
     #offering-section {
-        padding: 1rem 20px 2rem;
+        padding: 1rem 0 2rem;
         /* Reduce padding for mobile */
     }
 
@@ -2786,7 +2786,7 @@
 
 
     #gallery {
-        padding: 3rem 20px;
+        padding: 3rem 0;
         /* Reduce padding for mobile */
         background-color: #fcf9f4;
         /* Keep the same background */
@@ -2858,7 +2858,7 @@
     /* features section */
 
     #features-section {
-        padding: 5.5rem 20px;
+        padding: 5.5rem 0;
         /* Reduce padding for mobile */
         background-color: #ffdd98;
         /* Keep the same background */
@@ -3018,7 +3018,7 @@
     /* parents section */
 
     #parents-section {
-        padding: 3rem 20px;
+        padding: 3rem 0;
         /* Adjust padding for mobile */
     }
 
@@ -3218,7 +3218,7 @@
 
     /* CTA Section */
     #cta-section {
-        padding: 2rem 20px;
+        padding: 2rem 0;
         margin-top: 0rem;
     }
 
@@ -3254,7 +3254,7 @@
     /* recent news section */
 
     #recent-news-section {
-        padding: 3rem 20px;
+        padding: 3rem 0;
         /* Reduce padding for smaller screens */
     }
 
@@ -3319,7 +3319,7 @@
     /* footer */
 
     footer {
-        padding: 2rem 20px;
+        padding: 2rem 0;
         /* Adjust padding for smaller screens */
     }
 
@@ -3415,7 +3415,7 @@
 
     .footer-section-wave {
         top: -5%;
-        /* Adjust wave image positioning */
+        /* Adjusess wave image positioning */
     }
 
     .footer-section-wave img {
