@@ -24,13 +24,13 @@
 html {
     scroll-behavior: smooth;
     /* Enable smooth scrolling */
-    overflow-x: hidden;
+   
 }
 
 
 body {
     font-family: var(--primary-font);
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 
