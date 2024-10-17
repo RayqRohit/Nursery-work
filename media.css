@@ -2299,7 +2299,6 @@
         width: calc(100% - 40px);
         /* Adjust width if necessary */
 
-        display: none;
     }
 
     .apply-btn {
