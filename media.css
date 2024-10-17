@@ -15,19 +15,20 @@
     }
 }
 
-@media (max-width : 1280px){
+@media (max-width : 1280px) {
 
 
     .cycle-2 .wheel-2 {
         top: 16%;
         left: 17.2%;
     }
-    
+
 
     .header-wave {
-        bottom:-2px;
+        bottom: -2px;
         left: 0;
     }
+
     .footer-section-wave {
         top: -29%;
     }
@@ -1213,7 +1214,7 @@
         /* Eliminates any extra space below the image */
     }
 
-   
+
 }
 
 
@@ -2239,7 +2240,7 @@
         right: -10%;
         /* Adjust position */
 
-    
+
     }
 
     .footer-section-star img {
@@ -2247,7 +2248,7 @@
         /* Keep star image responsive */
     }
 
-    .footer-section-wave{
+    .footer-section-wave {
         display: none;
     }
 
@@ -2329,11 +2330,15 @@
         width: calc(100% - 40px);
         /* Adjust width if necessary */
 
+        background-color: #fa9db7;
+
     }
 
     .apply-btn {
         width: 100%;
         /* Make the button full-width on mobile */
+        background-color: #fa9db7;
+
     }
 
 
