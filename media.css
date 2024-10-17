@@ -1196,7 +1196,7 @@
 
 
 
-@media (min-width: 767px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
     nav {
         padding-inline: 20px;
         /* Adjust padding for smaller screens */
@@ -2227,7 +2227,7 @@
 
 
 /* Navbar styles for mobile */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
 
     nav {
         position: sticky;
