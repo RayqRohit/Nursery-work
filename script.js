@@ -156,7 +156,7 @@ const infiniteScroll = () => {
     }
 
     clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
+    if (!wrapper.matches(":hover")) autoPlay();
 }
 
 
@@ -175,7 +175,7 @@ wrapper.addEventListener("mouseleave", autoPlay);
 // school
 function scrollToAboutSchool() {
     const section = document.getElementById('about-school');
-    const headerOffset = 80; // Adjust this value based on your header height
+    const headerOffset = 60; // Adjust this value based on your header height
     const elementPosition = section.getBoundingClientRect().top;
     const offsetPosition = elementPosition - headerOffset;
 
@@ -310,6 +310,4 @@ const navLinks = document.querySelectorAll('.nav-links li a');
 navLinks.forEach(link => {
     link.addEventListener('click', setActiveNavLink);
 });
-
-
 
