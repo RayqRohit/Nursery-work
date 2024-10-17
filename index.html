@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery School</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./media.css">
+
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/51d768ed59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav>
+
+
+        <div class="nav-items container">
+
+            <div class="logo" onclick="scrollToHome(event)">
+                <img src="./assets/images/logo-real.png" alt="">
+            </div>
+
+
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <div class="nav-links"  id="nav-links">
+
+                <li><a href="#" class="hover-link active" onclick="scrollToHome()">Home</a></li>
+                <li><a href="#" class="hover-link" onclick="scrollToAboutSchool()">About us</a></li>
+                <li><a href="#offering-section" class="hover-link">Features</a></li>
+                <li><a href="#gallery" class="hover-link">Gallery</a></li>
+                <li><a href="#recent-news-section" class="hover-link">Recents</a></li>
+                <li><a href="#cta-section" class="hover-link" onclick="scrollToContact()">Contact</a></li>
+
+                <li class="close-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+
+            </div>
+
+            <div class="nav-apply-btn">
+
+                <button class="apply-btn" onclick="scrollToAboutSchool()">Apply Now</button>
+
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <header id="home">
+        <div class="container header-section">
+
+            <div class="cycle-img-container">
+                <div class="cycle-1">
+                    <img src="./assets/images/cycle1.png" alt="">
+
+                </div>
+
+                <div class="cycle-2">
+                    <img class="wheel-1" src="./assets/images/cycle2.png" alt="">
+                    <img class="wheel-2" src="./assets/images/cycle3.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="header-text">
+                <h3>Welcome to Anand Vidya Vihar School</h3>
+                <h1>Where Little Minds Blossom</h1>
+                <p> Nurturing Curiosity, Creativity, and Care.</p>
+
+                <button onclick="scrollToAboutSchool()">Admission Open for Nursery</button>
+
+            </div>
+
+
+            <img src="./assets/images/header-wave.png" alt="Wave" class="header-wave">
+
+        </div>
+    </header>
+
+
+    <!-- About us Section -->
+
+    <section id="about-school">
+
+        <div class="about-main-section-heading container">
+
+            <div class="left-text-info">
+                <div class="about-section-heading">
+                    <h1>
+                        <span class="highlight-pink">About</span><br>
+                        <span class="highlight-yellow">"Anand Vidya Vihar"</span>
+                    </h1>
+                </div>
+
+                <div class="name-desc">
+                    The Bal Shikshan Samiti Trust, Harinagar, Gotri Road, Vadodara is a pioneer in the field of
+                    education and has been running Anand Balwadi, a preschool, since 1961.
+                    Anand Vidya Vihar has been serving as a firm frontier in education since its establishment in the
+                    year 2000. It is a progressive school, where learning is facilitated through co-curricular
+                    activities and field trips by a team of qualified and dedicated teachers. We firmly believe that
+                    education is an endless journey and not a destination. It is a journey that is filled with
+                    discoveries, learnings, techniques, innovations, and lessons learned & developed each day. Bal
+                    Shikshan Samiti Trust has been paving the path of education with a standing record of decades in
+                    education and a team of competent teachers and educators.
+                </div>
+            </div>
+
+
+            <div class="right-text-info">
+                <h2>Admission Form</h2>
+                <form class="admission-form">
+                    <div class="form-group">
+                        <label for="child-name">Child's Name:</label>
+                        <input type="text" id="child-name" name="child-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-of-birth">Child's Date of Birth:</label>
+                        <input type="date" id="date-of-birth" name="date-of-birth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-name">Parent's Name:</label>
+                        <input type="text" id="parent-name" name="parent-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-number">Contact Number:</label>
+                        <input type="tel" id="contact-number" name="contact-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Program section -->
+
+    <section id="program-section">
+        <div class="program-main-section container">
+            <div class="program-heading-texts">
+                <h1>
+                    <span class="highlight-pink">Discover Our</span><br>
+                    <span class="highlight-yellow">Educational Programs</span>
+                </h1>
+            </div>
+
+
+
+            <div class="program-cards">
+
+               
+                    <div class="program-card card-1">
+                        <div class="program-card-img">
+                            <img src="./assets/images/dino-1.png" alt="">
+                        </div>
+
+                        <div class="program-card-text">
+                            <h3>Learning With Fun</h3>
+                            <p>Kids enjoy exciting activities, explore new ideas, and develop their imaginations.</p>
+                        </div>
+                    </div>
+         
+                <!-- <div style="padding: 0.3rem; background-color : #fa9db7 ; border-radius : 35px">
+                    <div class="program-card card-1">
+                        <div class="program-card-img">
+                            <img src="./assets/images/dino-1.png" alt="">
+                        </div>
+
+                        <div class="program-card-text">
+                            <h3>Learning With Fun</h3>
+                            <p>Kids enjoy exciting activities, explore new ideas, and develop their imaginations.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+               
+                    <div class="program-card card-2">
+                        <div class="program-card-img">
+                            <img src="./assets/images/dino-2.png" alt="">
+                        </div>
+
+                        <div class="program-card-text">
+                            <h3>Great Behaviour</h3>
+                            <p>Children practice good manners and learn to follow rules through fun games.</p>
+                        </div>
+                    </div>
+        
+
+            
+                    <div class="program-card card-3">
+                        <div class="program-card-img">
+                            <img src="./assets/images/dino-3.png" alt="">
+                        </div>
+
+                        <div class="program-card-text">
+                            <h3>Helpful & Kindnesss</h3>
+                            <p>Children learn kindness, sharing, and respect through fun activities.
+                            </p>
+                        </div>
+                    </div>
+          
+            </div>
+    </section>
+
+
+    <!-- why choose section -->
+    <section id="why-choose">
+
+        <div class="why-choose-wave-img">
+            <img src="./assets/images/why-choose-wave.png" alt="">
+        </div>
+        <div class="why-choose-main-section container">
+
+            <div class="why-choose-img">
+                <img src="./assets/images/kid1.jpg" alt="">
+            </div>
+
+            <div class="why-choose-text">
+                <div class="why-choose-header-text">
+                    <h1>
+                        <span class="highlight-pink-choose">Why Early</span><br>
+                        <span class="highlight-yellow-choose">Education Matters</span>
+                    </h1>
+                </div>
+
+                <p>Look into the eyes of a young child and see the sparkle and wonder. Develop these passions and
+                    watch
+                    the adult bloom into someone special. At Anand Vidya Vihar, we work every day to build the
+                    foundations for amazing futures.
+                </p>
+
+                <div class="why-choose-btn">
+
+                    <button class="apply-btn" onclick="scrollToAboutSchool()">Apply Now</button>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Numbers Section -->
+
+    <section id="numbers">
+
+        <!-- <div class="numbers-wave-img-up">
+            <img src="./assets/images/number-wave-1.png" alt="">
+        </div> -->
+
+
+        <div class="numbers-wave-img-up">
+            <img src="./assets/images/number-wave-1.png" alt="">
+        </div>
+
+        <div class="numbers-main-container container">
+
+
+            <div class="enroll-section">
+                <h1>Enroll Your Child Now! Call Us </h1>
+                <h1>+91 9428819877 or</h1>
+            </div>
+
+            <div class="enroll-btn">
+                <button class="apply-btn" onclick="scrollToAboutSchool()">Enroll Online</button>
+            </div>
+
+
+
+        </div>
+
+        <div class="numbers-wave-img-down">
+            <img src="./assets/images/number-wave-2.png" alt="">
+        </div>
+
+
+    </section>
+
+
+    <!-- what we offer section -->
+
+    <section id="offering-section">
+
+
+        <div class="offering-main-section container">
+
+
+
+            <div class="offering-heading-text">
+
+                <h1>
+                    <span class="highlight-pink-choose">What We Offer</span>
+                </h1>
+
+                <p>"Anand Vidya Vihar" believes in providing friendly environment to make each and every child feel special and comfortable by giving individual attention <br>during the initial years of learning.
+                </p>
+
+
+            </div>
+
+
+            <div class="offering-main-section">
+
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-1.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Arts Education</h2>
+                        <p>Gaze into the eyes of a child and witness the joy.</p>
+                    </div>
+                </div>
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-2.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Sports Activites</h2>
+                        <p>Watch a child play and see the joy of movement.</p>
+                    </div>
+                </div>
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-3.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Activity Rooms</h2>
+                        <p>Step into a space where imagination comes alive.</p>
+                    </div>
+                </div>
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-4.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Languages</h2>
+                        <p>Listen to children speak and watch them connect.</p>
+                    </div>
+                </div>
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-5.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Motor Skills</h2>
+                        <p>Observe children move and watch them grow strong.</p>
+                    </div>
+                </div>
+                <div class="offering-card">
+                    <div class="card-img">
+                        <img src="./assets/images/offer-6.png" alt="">
+                    </div>
+
+
+                    <div class="card-texts">
+                        <h2>Healthy Food</h2>
+                        <p>See kids enjoy tasty meals that help them thrive.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <!-- photo gallery section -->
+
+    <section id="gallery">
+
+        <div class="gallery-section-wave-img">
+            <img src="./assets/images/gallery-section-wave.png" alt="">
+        </div>
+
+        <div class="gallery-main-section container">
+
+
+            <div class="gallery-header-text">
+                <h1>
+                    <span>Our Photo Gallery</span>
+                </h1>
+            </div>
+
+
+            <div class="gallery-images">
+                <div class="gallery-img">
+                    <img src="./assets/images/kid2.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid4.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid6.jpg  " alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid8.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid3.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid5.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid7.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid9.jpg" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="./assets/images/kid10.jpg" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <!-- features section -->
+
+    <section id="features-section">
+        <div class="features-section-img-upwave">
+            <img src="./assets/images/upsection.png" alt="">
+        </div>
+        <div class="features-main-section container">
+            <img class="feature-cloud-4" src="./assets/images/cloud_4.png.png" alt="">
+            <div class="features">
+                <div>
+                    <div class="feature-box" style="outline: 2px dashed #59c0e6;">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle" style="color: #59c0e6;"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Better Skills</h3>
+                            <p>Stronger basic math skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="feature-box" style="outline: 2px dashed #fa9db7;">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle" style="color: #fa9db7;"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Drop Out Rates</h3>
+                            <p>Better pre-reading skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="feature-box" style="outline: 2px dashed #f7c04a;">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle" style="color: #f7c04a;"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Future Success</h3>
+                            <p>Richer vocabularies.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="feature-cloud-5" src="./assets/images/cloud_5.png.png" alt="">
+            </div>
+        </div>
+
+        <div class="features-section-img-downwave">
+            <img src="./assets/images/downsection.png" alt="">
+        </div>
+    </section>
+
+
+
+    <!-- testimonial section -->
+
+    <section id="testimonial-section">
+
+
+        <div class="testimonial-main-container container">
+
+
+            <div class="testimonial-texts">
+
+
+                <div class="testimonial-header-text">
+                    <h1>
+                        <span class="highlight-pink-testimonial">We Provide the</span><br>
+                        <span class="highlight-yellow-testimonial">Main Kids Activites</span>
+                    </h1>
+                </div>
+
+                <div class="testimonials-details">
+                    <p>Our Prime focus on each child's development in
+                        social-emotional growth, gross and fine motor skills,
+                        language and literacy, mathematics.</p>
+                </div>
+
+                <div class="testimonials-points">
+                    <div class="testimonial-block">
+                        <div class="block-point-img">
+                            <img src="./assets/images/pencil-point.png" alt="">
+                        </div>
+                        <div class="block-point-text">
+                            <h2>Outdoor Games</h2>
+                        </div>
+                    </div>
+                    <div class="testimonial-block">
+                        <div class="block-point-img">
+                            <img src="./assets/images/pencil-point.png" alt="">
+                        </div>
+                        <div class="block-point-text">
+                            <h2>Sport Activites</h2>
+                        </div>
+                    </div>
+                    <div class="testimonial-block">
+                        <div class="block-point-img">
+                            <img src="./assets/images/pencil-point.png" alt="">
+                        </div>
+                        <div class="block-point-text">
+                            <h2>Interactive Learning</h2>
+                        </div>
+                    </div>
+                    <div class="testimonial-block">
+                        <div class="block-point-img">
+                            <img src="./assets/images/pencil-point.png" alt="">
+                        </div>
+                        <div class="block-point-text">
+                            <h2>Fun & Learning Trips</h2>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+    <!-- parents section -->
+
+    <section id="parents-section">
+
+
+        <div class="parents-wave-img">
+            <img src="./assets/images/parents-section.png" alt="">
+        </div>
+        <div class="parents-main-section-container container">
+
+
+            <div class="parents-section-details">
+                <div class="parents-section-heading-text">
+                    <h1>
+                        <span class="highlight-pink-parents">What Parents Say</span>
+                    </h1>
+                </div>
+
+                <div class="parents-section-texts">
+                    <p>
+                        Anand Vidya Vihar is dedicated to providing high-quality early education and sports programs, ensuring that every child receives the support and foundation they need for a bright future.</p>
+                </div>
+            </div>
+
+            <div class="carousel-body">
+                <div class="carousel-items-section wrapper">
+                    
+                        <i id="left" class="fa-solid fa-chevron-left"></i>
+                  
+                    <div class="carousel-items carousel">
+                        <div class="carousel-cards card"> <!-- Repeat this block for more items -->
+                            <div class="showing-content" style="background-color: #fa9db7;">
+                                <p>"AVV has been a wonderful place for my child. The teachers are caring and nurturing, making the learning environment fun and safe. The curriculum balances education with creativity, helping children grow."</p>
+                            </div>
+                            <div class="parents-details">
+                                <div class="parents-img">
+                                    <img src="./assets/images/p3.jpg" alt="">
+                                </div>
+                                <div class="parents-text">
+                                    <h3>Anjali Shah</h3>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cards card"> <!-- Repeat this block for more items -->
+                            <div class="showing-content" style="background-color: #59c0e6;">
+                                <p>"My son absolutely loves AVV. The teachers are attentive, the facilities are excellent, and the focus on early education is exceptional. The school promotes both academic learning and  making sure kids enjoy every day.".</p>
+                            </div>
+                            <div class="parents-details">
+                                <div class="parents-img">
+                                    <img src="./assets/images/p4.jpg" alt="">
+                                </div>
+                                <div class="parents-text">
+                                    <h3>Priya Patel</h3>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cards card"> <!-- Repeat this block for more items -->
+                            <div class="showing-content" style="background-color: #f7c04a;">
+                                <p>"Anand Vihar has exceeded our expectations. The teachers provide personalized attention and keep the children excited about learning. The school focuses on both academics and social skills. I highly recommend this school!"</p>
+                            </div>
+                            <div class="parents-details">
+                                <div class="parents-img">
+                                    <img src="./assets/images/p5.jpg" alt="">
+                                </div>
+                                <div class="parents-text">
+                                    <h3>Sneha Desai</h3>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cards card"> <!-- Repeat this block for more items -->
+                            <div class="showing-content" style="background-color: #fa9db7;">
+                                <p>"This School offers a Good environment for children. The staff is compassionate and highly skilled in managing early education needs. My daughter enjoys going to school every day, and I’ve seen great improvement in her development."</p>
+                            </div>
+                            <div class="parents-details">
+                                <div class="parents-img">
+                                    <img src="./assets/images/p6.jpg" alt="">
+                                </div>
+                                <div class="parents-text">
+                                    <h3>Neha Mehta</h3>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cards card"> <!-- Repeat this block for more items -->
+                            <div class="showing-content" style="background-color: #59c0e6;">
+                                <p>"As a father, I’m truly grateful for AVV. The teachers create a good space where my son feels comfortable learning and growing. The way they teach is impressive, and my son’s development has been good since he started attending."</p>
+                            </div>
+                            <div class="parents-details">
+                                <div class="parents-img">
+                                    <img src="./assets/images/p2.jpg" alt="">
+                                </div>
+                                <div class="parents-text">
+                                    <h3>Ravi Borad</h3>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
+                        </div>
+               
+                    </div>
+                   
+                        <i id="right" class="fa-solid fa-chevron-right "></i>
+                   
+                </div>
+            </div>
+    
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- cta section -->
+
+    <section id="cta-section">
+
+        <div class="cta-section-img-wave">
+            <img src="./assets/images/cta-section.png" alt="">
+        </div>
+
+        <div class="cta-main-section-container container">
+
+            <div class="enroll-section">
+                <h1>Enroll Your Child Now! Call Us </h1>
+                <h1>+91 9428819877 or</h1>
+            </div>
+
+            <div class="enroll-btn">
+                <button class="apply-btn" onclick="scrollToAboutSchool()">Enroll Online</button>
+            </div>
+
+        </div>
+
+
+        <div class="cta-section-wave-down">
+            <img src="./assets/images/cta-section-down.png" alt="">
+        </div>
+
+    </section>
+
+
+
+    <!-- Recent News Section -->
+
+    <section id="recent-news-section">
+
+
+
+        <div class="recent-news-main-section container">
+
+
+            <div class="news-section-header-text">
+                <h1>
+                    <span class="highlight-pink-parents">Our Latest News</span>
+                </h1>
+            </div>
+
+
+            <div class="news-section-cards">
+
+               
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="./assets/images/news2.png" alt="">
+                    </div>
+                    <div class="news-card-text">
+                        <div class="date-section">
+                            <p>13th Feb 2024</p>
+                        </div>
+
+                        <div class="news-card-heading">
+                            <h1>"APA, AVV and funfair"</h1>
+                            <p>When the school ground wears a festive and bustling look, when your eyes are dazzled by the stalls, artifacts, tattoo and games while your senses captivated by the aroma of great food...you know you are in the AVV ground, for the fun fair.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="./assets/images/news3.png" alt="">
+                    </div>
+                    <div class="news-card-text">
+                        <div class="date-section">
+                            <p>9th Feb 2024</p>
+                        </div>
+
+                        <div class="news-card-heading">
+                            <h1>"Alankrita-dreams unbridled..."</h1>
+                            <p>The annual art exhibition at Exhibition hall,Faculty of Fine Arts on 9 and 10 February was the talk of the town as it was to commemorate the birth anniversary of our Founder Chairperson,(Late) Smt Savitaben Amin, while Dr.Parul Patel,Vice President,Parul University and trustee,Anand Vidya Vihar was the Guest of Honour.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="./assets/images/news1.png" alt="">
+                    </div>
+                    <div class="news-card-text">
+                        <div class="date-section">
+                            <p>29th Apr 2023</p>
+                        </div>
+
+                        <div class="news-card-heading">
+                            <h1>"Purvaiyya!!!"</h1>
+                            <p>The World dance day celebration held on 29th of April was as spectacular as ever with houses pitted against each other presenting the North Eastern brother and sister states' folk dances complete with the costumes, finery, choreography and songs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- footer section -->
+
+
+    <footer>
+
+        <div class="footer-section-wave">
+            <img src="./assets/images/footer-section.png" alt="">
+        </div>
+        <div class="footer-main-container container">
+
+
+            <div class="footer-section-cat">
+                <img src="./assets/images/cat.png.png" alt="">
+            </div>
+
+
+            <div class="footer-about-section">
+
+                <div class="footer-logo">
+                    <img src="./assets/images/logo-real.png" alt="">
+                </div>
+
+                <div class="footer-about-text">
+                    <p>Come To visit Anand Vidya Vihar for
+                        yourself so you can tour the rooms
+                        and meet some of our educators.
+                        We offer high Quality early
+                        education.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+
+                <h2>Our Contacts</h2>
+
+                <div class="footer-contact-address">
+                    <div>
+                        <i class="fa-solid fa-location-dot" style="color: #fa9db7;"></i>
+                    </div>
+
+                    <div>
+                        <p>Harinagar Society , Gotri Road</p>
+                        <p>Subhanpura, Vadodara (390023)
+                            Gujarat-India</p>
+                    </div>
+                </div>
+                <div class="footer-contact-phone">
+                    <div>
+                        <i class="fa-solid fa-phone" style="color: #45b3df;"></i>
+                    </div>
+
+                    <div>
+                        <p>+91 9428819877</p>
+                      
+
+                    </div>
+                </div>
+                <div class="footer-contact-email">
+                    <div>
+                        <i class="fa-solid fa-envelope" style="color: #f7c04a;"></i>
+                    </div>
+
+                    <div>
+                        <p>anandvidyavihar@yahoo.co.in</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        
+
+
+            <div class="footer-meeting-time">
+                <h1>Open Hours</h1>
+
+                <div class="meeting-time-container">
+                    <div class="meeting-time-item">
+                        <span class="meeting-day">Mon - Fri ➜ </span> 9:00 am - 12:30 pm.
+                    </div>
+                    <div class="meeting-time-item">
+                        <span class="meeting-day">Sat ➜</span> 9:30 am - 10:00 am.
+                    </div>
+                    <div class="meeting-time-item">
+                        <span class="meeting-day">Sun ➜</span> Closed
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="footer-section-star">
+                <img src="./assets/images/stars.png.png" alt="">
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="./script.js"></script>
+ 
+</body>
+
+</html>

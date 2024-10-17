@@ -1,0 +1,3429 @@
+@import "./styles.css";
+
+
+/* for carousel section only */
+/* @media (max-width: 1000px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+} */
+
+@media (max-width: 700px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    /* Adjust the nav-items layout for medium screens */
+
+    nav {
+        position: sticky;
+        /* Sticky positioning */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+
+        padding-inline: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        /* Hide off-screen initially */
+        height: 100vh;
+        width: 70%;
+        /* Adjust as needed */
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        /* Smooth transition for slide-in effect */
+        z-index: 999;
+        /* Ensure it is above other content */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        /* Add some spacing between links */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger on mobile */
+    }
+
+    .nav-active {
+        left: 0;
+        /* Slide in */
+    }
+
+    /* Show close icon when menu is active */
+    .nav-active .close-icon {
+        display: block;
+        /* Show close icon */
+    }
+
+    /* Hide hamburger icon when menu is active */
+    .nav-active .hamburger {
+        display: none;
+        /* Hide hamburger icon */
+    }
+
+    .nav-apply-btn {
+        position: fixed;
+        /* Fix position */
+        bottom: 20px;
+        /* Distance from the bottom */
+        right: 20px;
+        /* Distance from the right */
+        z-index: 1001;
+        /* Ensure it is above other content */
+        width: calc(100% - 40px);
+        /* Adjust width if necessary */
+        display: none;
+    }
+
+    /* header */
+
+    header {
+        height: 100vh;
+        /* Adjust header height */
+        background-size: cover;
+        /* Ensure background image scales well */
+    }
+
+    .header-text {
+        width: 50%;
+        /* Adjust width for better spacing */
+        top: 45%;
+        /* Position text higher */
+
+
+    }
+
+    .header-text h3 {
+        font-size: 25px;
+        /* Slightly reduce font size */
+        padding: 0.5rem;
+        /* Keep padding for consistency */
+
+    }
+
+    .header-text h1 {
+        font-size: 4rem;
+        /* Slightly reduce font size */
+    }
+
+    .header-text p {
+        font-size: 1rem;
+        /* Adjust paragraph font size */
+        line-height: 1.6;
+        /* Adjust line height for readability */
+    }
+
+    .header-text button {
+        padding: 0.8rem 1.5rem;
+        /* Adjust button padding */
+        font-size: 15px;
+        /* Adjust font size for button */
+    }
+
+    /* Adjust positions of cycle images if needed */
+    .cycle-1 {
+        top: 5%;
+        /* Position adjustment */
+        left: 5%;
+        /* Adjust left positioning */
+    }
+
+    .cycle-2 .wheel-1 {
+        top: 13%;
+        /* Adjust wheel positioning */
+        left: 4%;
+        /* Adjust left positioning */
+    }
+
+    .cycle-2 .wheel-2 {
+        top: 13%;
+        /* Adjust wheel positioning */
+        left: 13%;
+        /* Adjust left positioning */
+    }
+
+    .header-wave {
+        bottom: 0;
+        /* Maintain bottom positioning */
+    }
+
+
+
+    /* about school */
+
+    #about-school {
+        padding: 20px 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .about-main-section-heading {
+        flex-direction: column;
+        /* Stack sections vertically */
+        align-items: center;
+        /* Center the content */
+    }
+
+    .left-text-info {
+        padding: 10px;
+        /* Reduce padding around the left text */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .about-section-heading h1 {
+        font-size: 2.2rem;
+        /* Adjust heading size for mobile */
+        line-height: 1.4;
+        /* Adjust line height for better spacing */
+    }
+
+    .name-desc {
+        font-size: 0.9rem;
+        /* Smaller font size for description */
+        line-height: 1.4;
+        /* Adjust line height for better readability */
+        padding: 0 10px;
+        /* Add horizontal padding */
+    }
+
+    .right-text-info {
+        padding: 20px;
+        /* Reduce padding around the form */
+        width: 100%;
+        /* Full width on mobile */
+        margin-top: 20px;
+        /* Add margin for spacing */
+    }
+
+    .right-text-info h2 {
+        font-size: 1.7rem;
+        /* Adjust size for mobile */
+        margin-bottom: 2rem;
+        /* Space below heading */
+    }
+
+    .admission-form {
+        flex-direction: column;
+        /* Stack form elements vertically */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        /* Reduced space between fields */
+    }
+
+
+    .form-group label {
+        margin-bottom: 5px;
+        /* Adds 20px of space below the label */
+        font-size: 1.1rem;
+        /* Ensures the label text is readable */
+        color: #787c85;
+        /* Keeps the label color consistent */
+        font-family: var(--primary-font);
+        /* Ensures consistent font */
+        font-weight: 900;
+        /* Keeps the label bold */
+        display: block;
+        /* Ensures the label stays above the input */
+    }
+
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+        /* Smaller font size for inputs */
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        /* Adjust button font size */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .highlight-pink::before,
+    .highlight-yellow::before {
+        left: -5px;
+        /* Adjust highlight position */
+        right: -5px;
+        /* Adjust highlight position */
+    }
+
+    .name-desc {
+        font-size: 1.08rem;
+        /* Adjust description font size */
+        line-height: 1.5;
+        padding-bottom: 1.2rem;
+    }
+
+    /* program section */
+
+    .program-main-section {
+        padding: 3rem 0;
+        /* Adjust the padding */
+        margin-top: 20px;
+    }
+
+    .program-heading-texts {
+        width: 90%;
+        /* Full width for smaller screens */
+        margin-bottom: 2rem;
+        /* Reduced margin */
+    }
+
+    .program-heading-texts h1 {
+        font-size: 2.2rem;
+        /* Smaller heading */
+        margin-bottom: 1.5rem;
+        /* Less space below heading */
+    }
+
+    /* Program Cards Section */
+    .program-cards {
+        display: flex;
+        /* Enable flexbox */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        /* Center cards */
+        gap: 1.5rem;
+        /* Reduce gap between cards */
+        padding: 1rem;
+        /* Less padding */
+    }
+
+    .program-card {
+        width: calc(50% - 1.5rem);
+        /* Two cards per row */
+        max-width: 350px;
+        /* Limit max width */
+        height: 450px;
+        /* Adjust height to content */
+        border-radius: 20px;
+        /* Smaller border radius */
+        margin: 0;
+        /* Remove auto margin */
+    }
+
+    /* Adjusting for the third card */
+    .program-card:nth-child(3) {
+        width: 90%;
+        /* Full width for the third card */
+        margin: 0 auto;
+        /* Center the third card */
+    }
+
+    .program-card-img {
+        height: 220px;
+        /* Smaller image height */
+    }
+
+    .program-card-text h3 {
+        font-size: 1.3rem;
+        /* Smaller font size for headings */
+    }
+
+    .program-card-text p {
+        font-size: 1rem;
+        /* Smaller font size for paragraphs */
+        line-height: 1.6;
+        /* Adjust line height */
+    }
+
+    /* why choose section */
+
+
+    #why-choose {
+        padding: 2rem 20px;
+        /* Maintain padding */
+    }
+
+    .why-choose-main-section {
+        flex-direction: row;
+        /* Ensure horizontal layout */
+        align-items: center;
+        /* Center align items */
+        justify-content: space-between;
+        /* Space items evenly */
+        gap: 1rem;
+        /* Maintain gap */
+    }
+
+    .why-choose-img {
+        width: 50%;
+        /* Adjust width for image */
+        padding: 0.8rem;
+        /* Maintain padding */
+        background-color: white;
+        /* Maintain background */
+        border: 2px dashed #fa9db7;
+        /* Maintain border style */
+        border-radius: 35px;
+        /* Maintain border radius */
+    }
+
+    .why-choose-img img {
+        border-radius: 35px;
+        /* Maintain image border radius */
+        width: 100%;
+        /* Ensure the image takes full width */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .why-choose-text {
+        width: 45%;
+        /* Adjust width for text */
+        padding: 1rem;
+        /* Maintain padding */
+        margin: 0;
+        /* Reset margin */
+    }
+
+    .why-choose-text h1 {
+        margin-bottom: 1rem;
+        /* Maintain margin */
+        font-size: 2.2rem;
+        /* Slightly smaller font size for headings */
+        line-height: 1.2;
+    }
+
+    .why-choose-text p {
+        margin-block: 1.5rem;
+        /* Reduced margin for paragraph */
+        line-height: 1.6;
+        /* Adjust line height for readability */
+        font-size: 16px;
+        /* Smaller font size for paragraphs */
+    }
+
+    .why-choose-btn {
+        margin-top: 1rem;
+        /* Maintain margin */
+        width: 168px;
+        /* Keep button width */
+        padding: 0.4rem;
+        /* Maintain padding */
+        border-radius: 29px;
+        /* Maintain border radius */
+        background-color: #ffc85b;
+        /* Maintain background color */
+    }
+
+    .why-choose-btn:hover {
+        background-color: #39a1c5;
+        /* Maintain hover effect */
+    }
+
+    .highlight-pink-choose,
+    .highlight-yellow-choose {
+        font-size: 1.8rem;
+        /* Adjust font size for highlights */
+    }
+
+    .highlight-pink-choose::before,
+    .highlight-yellow-choose::before {
+        left: -5px;
+        /* Adjust position for highlights */
+        right: -5px;
+        /* Adjust position for highlights */
+        height: 40%;
+        /* Reduce height of background */
+    }
+
+    .why-choose-wave-img {
+        top: -15%;
+        /* Adjust wave image position for medium screens */
+        height: auto;
+        /* Ensure image maintains aspect ratio */
+    }
+
+
+    /* numbers section */
+
+    #numbers {
+        padding: 4rem 0;
+        /* Adjust padding for medium screens */
+    }
+
+    .numbers-main-container {
+        flex-direction: column;
+        /* Ensure a column layout */
+        text-align: center;
+        /* Center text alignment */
+
+    }
+
+    .enroll-section h1 {
+        padding-top: 0.8rem;
+        font-size: 3rem;
+        /* Reduce font size for headings */
+        line-height: 1.3;
+        /* Adjust line height */
+    }
+
+    .number-text-group {
+        flex-direction: row;
+        /* Maintain row layout */
+        justify-content: center;
+        /* Center the numbers */
+        gap: 2rem;
+        /* Add gap between number texts */
+    }
+
+    .number-text {
+        width: 150px;
+        /* Reduce width of each number text */
+    }
+
+    .number-text h1 {
+        font-size: 3rem;
+        /* Reduce font size for number headings */
+    }
+
+    .number-text p {
+        font-size: 18px;
+        /* Adjust font size for number paragraphs */
+    }
+
+    .enroll-btn {
+        margin-top: 1rem;
+        /* Maintain top margin */
+        padding: 0.5rem;
+        /* Keep padding */
+        border-radius: 29px;
+        /* Maintain border radius */
+        background-color: white;
+        /* Maintain background color */
+        transition: all 0.3s ease;
+        /* Maintain transition */
+    }
+
+    .enroll-btn .apply-btn {
+        font-size: 20px;
+        /* Slightly reduce font size */
+        background-color: white;
+        /* Maintain background color */
+        color: #45b3df;
+        /* Maintain text color */
+        outline: 2px dashed #45b3df;
+        /* Maintain outline */
+        padding: 0.7rem 1rem;
+        /* Add padding for the button */
+    }
+
+    .numbers-wave-img-up img,
+    .numbers-wave-img-down img {
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .numbers-wave-img-up {
+        padding-top: 2rem;
+        top: -10%;
+        /* Adjust position for wave image */
+    }
+
+    .numbers-wave-img-down {
+        bottom: -15%;
+        /* Adjust position for wave image */
+    }
+
+
+    /* offering section */
+
+    #offering-section {
+        padding: 2rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .offering-heading-text {
+        width: 80%;
+        /* Increase width for better spacing */
+        margin: 0 auto;
+        /* Center the heading text */
+    }
+
+    .offering-heading-text h1 span {
+        font-size: 2.3rem;
+        /* Reduce font size for headings */
+        margin-top: 2rem;
+        /* Adjust margin */
+        margin-bottom: 1rem;
+        /* Adjust margin */
+    }
+
+    .offering-heading-text p {
+        font-size: 16px;
+        /* Slightly reduce paragraph font size */
+    }
+
+    .offering-main-section {
+        gap: 1.5rem;
+        /* Reduce gap between cards */
+    }
+
+    .offering-card {
+        flex: 1 1 calc(45% - 1rem);
+        /* Adjust card width to fit two cards per row */
+        padding: 1rem;
+        /* Adjust padding for cards */
+    }
+
+    .card-texts h2 {
+        font-size: 1.4rem;
+        /* Reduce font size for card headings */
+    }
+
+    .card-texts p {
+        font-size: 1rem;
+        /* Reduce font size for card descriptions */
+    }
+
+
+    /* gallery section */
+
+    #gallery {
+        padding: 4rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .gallery-header-text h1 {
+        font-size: 2.5rem;
+        /* Slightly reduce font size for headers */
+        width: 80%;
+        /* Increase width for better spacing */
+        margin-top: 2rem;
+        /* Adjust margin */
+        margin-bottom: 2rem;
+        /* Adjust margin */
+    }
+
+    .gallery-images {
+        gap: 1rem;
+        /* Reduce gap between images */
+    }
+
+    .gallery-img {
+        flex: 0 0 calc(33.33% - 1rem);
+        /* Adjust image width to fit two images per row */
+    }
+
+    .gallery-header-text h1 span {
+        font-size: 2.5rem;
+        /* Reduce font size for span */
+    }
+
+    .gallery-header-text h1 span::before {
+        bottom: 5%;
+        /* Adjust position of the gradient background */
+        height: 30%;
+        /* Reduce height of the gradient background */
+    }
+
+
+    /* feature section */
+
+    #features-section {
+        padding: 5rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .features {
+        flex-direction: row;
+        /* Align feature boxes in a row */
+        flex-wrap: wrap;
+        /* Allow wrapping of items */
+        justify-content: center;
+        /* Center align feature boxes */
+        gap: 1.5rem;
+        /* Adjust gap between feature boxes */
+    }
+
+    .feature-box {
+        width: calc(100% - 1rem);
+        /* Adjust width to fit three feature boxes per row */
+        padding: 2rem;
+        /* Maintain padding for feature boxes */
+    }
+
+    .feature-icon {
+        width: 60px;
+        /* Increase icon size slightly */
+        height: 60px;
+        /* Increase icon size slightly */
+    }
+
+    .feature-text h3 {
+        font-size: 1.6rem;
+        /* Increase font size for headings */
+        margin: 0;
+        /* Remove margin */
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide overflow if text is too long */
+        text-overflow: ellipsis;
+        /* Add ellipsis for overflowed text */
+    }
+
+    .feature-text p {
+        font-size: 1rem;
+        /* Increase font size for paragraphs */
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide overflow if text is too long */
+    }
+
+    .features-section-img-upwave {
+        top: -5%;
+        /* Adjust wave position */
+    }
+
+    .features-section-img-downwave {
+        bottom: -5%;
+        /* Adjust wave position */
+    }
+
+    .feature-cloud-4 {
+        width: 200px;
+        /* Adjust cloud size for medium screens */
+        left: -15%;
+        /* Adjust position */
+        bottom: 75%;
+        /* Adjust position */
+    }
+
+    .feature-cloud-5 {
+        width: 200px;
+        /* Adjust cloud size for medium screens */
+        right: -10%;
+        /* Adjust position */
+        bottom: -5%;
+        /* Adjust position */
+    }
+
+
+    /* testimonial section */
+
+    #testimonial-section {
+        padding: 4.5rem 20px;
+        background-position: center center;
+        margin-top: 0;
+    }
+
+    .testimonial-texts {
+        width: 80%;
+        /* Adjust width to better fit medium screens */
+        height: auto;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Slightly transparent white background */
+        padding: 2rem;
+        /* Increase padding for medium screens */
+        border-radius: 15px;
+        /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Shadow for depth */
+    }
+
+    .testimonial-header-text,
+    .testimonials-details,
+    .testimonials-points {
+        text-align: left;
+        /* Left-align text */
+    }
+
+    .testimonial-header-text h1 {
+        font-size: 2.2rem;
+        /* Increase font size for medium screens */
+    }
+
+    .testimonials-details p {
+        font-size: 1.1rem;
+        /* Adjust font size for readability */
+        line-height: 1.6;
+        /* Adjust line height */
+        width: 100%;
+        /* Use full width */
+        margin: 0;
+        /* Remove margin */
+    }
+
+    .testimonials-points {
+        flex-direction: column;
+        /* Display points in a row */
+        justify-content: space-between;
+        /* Space the points evenly */
+        gap: 2rem;
+        /* Adjust gap between points */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-block {
+        justify-content: flex-start;
+        /* Keep text and icon aligned */
+        align-items: center;
+        /* Center align vertically */
+        text-align: left;
+        /* Left align block text */
+    }
+
+    .testimonial-block .block-point-img {
+        margin-right: 1rem;
+        /* Increase margin for spacing */
+        width: 25px;
+        /* Adjust icon size for medium screens */
+    }
+
+    .block-point-img img {
+        width: 100%;
+        /* Adjust icon size */
+    }
+
+    .block-point-text h2 {
+        font-size: 1.5rem;
+        /* Increase heading size */
+    }
+
+
+
+    /* parent section */
+
+    #parents-section {
+        padding: 3rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .parents-wave-img img {
+        width: 100%;
+        height: auto;
+        /* Ensure the image scales properly on medium screens */
+    }
+
+    .parents-main-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center align content */
+        padding: 2rem;
+    }
+
+    .parents-section-details {
+        text-align: center;
+        margin-bottom: 2rem;
+        /* Adjust spacing */
+    }
+
+    .parents-section-heading-text h1 {
+        font-size: 2.5rem;
+        /* Adjust heading size */
+    }
+
+    .parents-section-texts p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        /* Adjust font size and line height for readability */
+    }
+
+    .carousel-body {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        /* Center the carousel body */
+        align-items: center;
+        /* Vertically align items in the center */
+    }
+
+    .carousel-items-section {
+        display: flex;
+        justify-content: center;
+        /* Center the entire carousel section */
+        align-items: center;
+        gap: 1rem;
+        /* Space between the left and right icons and carousel items */
+    }
+
+    .carousel-items {
+        display: flex;
+        justify-content: center;
+        /* Ensure carousel items are centered */
+        gap: 1.5rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        /* Enable horizontal scrolling for carousel items */
+        width: 100%;
+        /* Make carousel take full width to ensure centering */
+    }
+
+    .carousel-cards {
+        min-width: 250px;
+        max-width: 350px;
+        flex: 1;
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        margin: 0 auto;
+        /* Center each individual card */
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+
+    .showing-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        /* Adjust text size and line height */
+    }
+
+    .parents-details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        /* Adjust the space between the image and text */
+        width: 200px;
+
+
+    }
+
+    .parents-img img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        /* Ensure the image is circular and appropriately sized */
+    }
+
+    .parents-text h3 {
+        font-size: 1.4rem;
+        /* Adjust text size if needed */
+        margin: 0;
+
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide any overflowing text */
+    }
+
+    .parents-text p {
+        font-size: 1rem;
+        /* Adjust the size of the "Parent" text */
+        margin: 0;
+        text-align: left;
+    }
+
+
+    .parents-section-details {
+        width: 600px;
+    }
+
+    /* Chevron buttons */
+    #left,
+    #right {
+        font-size: 2rem;
+        cursor: pointer;
+        /* Style the carousel navigation arrows */
+    }
+
+    .parents-wave-img {
+        top: -7%;
+        left: 0;
+    }
+
+
+
+
+
+
+
+    /* cta section */
+
+
+    #cta-section {
+        padding: 3rem 0;
+        background-color: #ffb9cc;
+        margin-top: 3rem;
+    }
+
+    .cta-main-section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 2rem;
+        /* Added some padding for better layout on medium screens */
+    }
+
+    .enroll-section h1 {
+        font-size: 3.5rem;
+        /* Reduce font size slightly to fit on medium screens */
+        line-height: 1.3;
+    }
+
+    .enroll-btn {
+        margin-top: 1.5rem;
+
+        /* Slightly increase padding for better click area */
+        border-radius: 25px;
+    }
+
+    .enroll-btn .apply-btn {
+        font-size: 18px;
+        /* Adjust button font size */
+        background-color: white;
+        color: #45b3df;
+        outline: 2px dashed #45b3df;
+        padding: 0.5rem 2rem;
+        /* Add padding for better button size */
+    }
+
+    .cta-section-img-wave {
+        top: -14%;
+        /* Adjust position to make wave image look better */
+        left: 0;
+        width: 100%;
+    }
+
+    .cta-section-wave-down {
+        bottom: -20%;
+        /* Adjust position of bottom wave image */
+        left: 0;
+        width: 100%;
+    }
+
+
+    /* recent news section */
+
+    #recent-news-section {
+        padding-inline: 20px;
+    }
+
+    .news-section-header-text h1 span {
+        font-size: 2.5rem;
+        /* Adjusted font size for responsiveness */
+    }
+
+    .news-section-cards {
+        gap: 15px;
+        /* Adjust gap between cards */
+    }
+
+    .news-card {
+        flex: 1 1 calc(33.33% - 15px);
+        /* Ensure three cards fit per row */
+        max-width: calc(33.33% - 10px);
+        /* Set max width with adjusted gap */
+        padding: 20px;
+        /* Add padding to the cards */
+    }
+
+    .news-card-img img {
+        height: auto;
+        /* Maintain the aspect ratio of images */
+        border-radius: 20px;
+    }
+
+    .news-card-heading h1 span {
+        font-size: 1.3rem;
+        /* Adjust heading size */
+    }
+
+    .news-card-heading p {
+        font-size: 1rem;
+        /* Adjust paragraph text size */
+    }
+
+    .date-section p {
+        font-size: 0.9rem;
+        /* Adjust date text size */
+    }
+
+    .news-card-heading {
+        padding-top: 20px;
+        /* Adjust padding to avoid overlap with the date */
+    }
+
+
+
+    /* footer section */
+
+    footer {
+        padding: 5rem 20px;
+        /* Increase padding for better spacing */
+        background-color: #2d4073;
+        /* Maintain background color */
+    }
+
+    .footer-main-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align all items */
+        gap: 30px;
+        /* Add space between stacked items */
+    }
+
+    .footer-about-section,
+    .footer-contact,
+    .footer-meeting-time {
+        flex: 1 1 100%;
+        /* Allow sections to take full width */
+        max-width: 85%;
+        /* Ensure max width is 100% */
+        text-align: center;
+        /* Center align text for readability */
+    }
+
+    .footer-section-cat {
+        width: 200px;
+        /* Set a smaller width for the cat image */
+        margin-bottom: 75px;
+        /* Slightly overlap the footer for aesthetic */
+        margin-left: 100px;
+    }
+
+    .footer-section-star {
+        width: 200px;
+        /* Set a smaller width for the star image */
+        margin-top: -35px;
+        /* Slightly overlap the footer for aesthetic */
+    }
+
+    .footer-about-text p,
+    .footer-contact p {
+        font-size: 1rem;
+        /* Adjust font size for better readability */
+        line-height: 1.5;
+        /* Improve line height for better text flow */
+
+        text-align: center;
+    }
+
+    .footer-contact h2,
+    .footer-meeting-time h1 {
+        font-size: 1.5rem;
+        /* Increase heading size for emphasis */
+        margin-bottom: 20px;
+        /* Space below headings */
+    }
+
+    .footer-contact-address,
+    .footer-contact-phone,
+    .footer-contact-email {
+        justify-content: center;
+        /* Center the icons and text */
+        margin-bottom: 20px;
+        /* Maintain spacing */
+
+        text-align: center;
+
+
+    }
+
+
+    .footer-contact i {
+        font-size: 1.7rem;
+        /* Increase icon size for better visibility */
+    }
+
+    .meeting-time-container {
+        width: auto;
+        /* Allow full width adjustments */
+        padding: 1rem;
+        /* Adjust padding for comfort */
+        border-radius: 15px;
+        /* Slightly reduce border radius */
+        background-color: #45b3df;
+        /* Maintain background color */
+    }
+
+    .meeting-time-item {
+        justify-content: center;
+        /* Center items in the meeting time section */
+        color: white;
+        /* Ensure text is readable */
+    }
+
+    .meeting-day {
+        font-weight: bold;
+        /* Emphasize day of the week */
+        margin-right: 10px;
+        /* Space between day and time */
+    }
+
+    .footer-section-wave {
+        top: -10%;
+        /* Adjust this value based on how much of the wave you want visible */
+    }
+
+    .footer-section-wave img {
+        width: 100%;
+        /* Ensures the wave image is responsive */
+        height: auto;
+        /* Maintains the aspect ratio of the image */
+        display: block;
+        /* Eliminates any extra space below the image */
+    }
+
+}
+
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    nav {
+        padding-inline: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .nav-links {
+        position: fixed;
+        /* Keep it fixed for easy access */
+        top: 0;
+        left: -100%;
+        /* Initially hide off-screen */
+        height: 100vh;
+        width: 75%;
+        /* Wider for mobile view */
+        background-color: white;
+        flex-direction: column;
+        /* Stack links vertically */
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        /* Smooth transition */
+        z-index: 999;
+        /* Above other content */
+    }
+
+    .nav-links li {
+        margin: 1.1rem 0;
+        /* More spacing between links */
+        font-size: 20px;
+        /* Larger font size for readability */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger on mobile */
+        cursor: pointer;
+        /* Indicate it's clickable */
+        font-size: 24px;
+        /* Larger icon for touch targets */
+    }
+
+    .nav-active {
+        left: 0;
+        /* Slide in from the left */
+    }
+
+    .close-icon {
+        display: none;
+        /* Hide close icon by default */
+        cursor: pointer;
+        /* Indicate it's clickable */
+        font-size: 25px;
+        /* Size for touch targets */
+    }
+
+    /* Show close icon when menu is active */
+    .nav-active .close-icon {
+        display: block;
+        /* Show close icon */
+        position: absolute;
+        /* Position it absolutely */
+        top: 20px;
+        /* Adjust position */
+        right: 20px;
+        /* Adjust position */
+        font-size: 25px;
+    }
+
+    /* Hide hamburger icon when menu is active */
+    .nav-active .hamburger {
+        display: none;
+        /* Hide hamburger icon */
+    }
+
+    .nav-apply-btn {
+        position: fixed;
+        /* Fix position */
+        bottom: 20px;
+        /* Distance from the bottom */
+        right: 10px;
+        /* Adjust distance from the right */
+        z-index: 1001;
+        /* Ensure it is above other content */
+        width: calc(100% - 20px);
+        /* Full width with some padding */
+    }
+
+    .apply-btn {
+        width: 100%;
+        /* Make button full-width */
+        padding: 0.7rem 1.5rem;
+        /* Adjust padding for a comfortable touch target */
+        font-size: 16px;
+        /* Ensure button text is legible */
+    }
+
+
+    /* header section */
+
+    header {
+        height: 100vh;
+        /* Adjusted height for medium screens */
+        background-size: cover;
+        background-position: center;
+        padding-inline: 20px;
+    }
+
+    .header-text {
+        width: 57%;
+        /* Increased width to utilize more space */
+
+        top: 40%;
+        /* Adjusted vertical positioning */
+
+
+    }
+
+    .header-text h3 {
+        font-size: 20px;
+        /* Adjusted font size */
+        padding: 0.5rem;
+        /* Adjusted padding */
+        margin-bottom: 0.9rem;
+        /* Adjusted margin */
+        width: 100%;
+        /* Full width for better responsiveness */
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+        /* Reduced font size */
+        margin-block: 0.8rem;
+        /* Adjusted margin */
+    }
+
+    .header-text p {
+        font-size: 0.95rem;
+        /* Adjusted font size for better readability */
+        line-height: 1.5;
+        /* Adjusted line height */
+        width: 95%;
+        /* Adjusted width */
+    }
+
+    .header-text button {
+        padding: 0.7rem 1.3rem;
+        /* Adjusted padding */
+        font-size: 16px;
+        /* Reduced font size */
+        background-color: #ffc85b;
+        /* Ensure background color remains consistent */
+        color: white;
+        /* Ensure text color is consistent */
+        border-radius: 29px;
+        /* Ensure border radius remains consistent */
+        transition: background-color 0.3s ease;
+        /* Smooth transition for hover effect */
+    }
+
+    .header-text button:hover {
+        background-color: #fa9db7;
+        /* Button hover effect */
+    }
+
+    .cycle-1 {
+        top: 7%;
+        /* Adjusted position for the cycle image */
+        left: 2%;
+        /* Adjusted position for the cycle image */
+    }
+
+    .cycle-2 .wheel-1 {
+        top: 15%;
+        /* Adjusted position for the first wheel */
+        left: 0.8%;
+        /* Adjusted position for the first wheel */
+    }
+
+    .cycle-2 .wheel-2 {
+        top: 15%;
+        /* Adjusted position for the second wheel */
+        left: 14%;
+        /* Adjusted position for the second wheel */
+    }
+
+    .header-wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+
+    /* about section */
+
+    #about-school {
+        padding: 40px 20px;
+        /* Adjusted padding */
+    }
+
+    .about-main-section-heading {
+        flex-direction: column;
+        /* Stack left and right sections vertically */
+        align-items: center;
+        /* Center align items */
+    }
+
+    .left-text-info {
+        flex: none;
+        /* Prevent this section from growing */
+        width: 100%;
+        /* Full width for left section */
+        padding: 20px;
+        /* Maintain padding */
+        margin-bottom: 20px;
+        /* Space below the section */
+    }
+
+    .about-section-heading h1 {
+        font-size: 2.2rem;
+        /* Adjusted heading size */
+        margin-bottom: 15px;
+        /* Adjusted space below heading */
+    }
+
+    .name-desc {
+        font-size: 1.1rem;
+        /* Maintain standard font size */
+        line-height: 1.5;
+        /* Adjusted line height */
+        color: #333;
+        /* Dark text color */
+    }
+
+    .right-text-info {
+        flex: none;
+        /* Prevent this section from growing */
+        width: 100%;
+        /* Full width for right section */
+        padding: 20px;
+        /* Maintain padding */
+        background-color: #ffffff;
+        /* White background */
+        border-radius: 8px;
+        /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow for depth */
+    }
+
+    .right-text-info h2 {
+        font-size: 2rem;
+        /* Adjusted font size for h2 */
+        margin-bottom: 1.8rem;
+        /* Adjusted margin */
+    }
+
+    .form-group label {
+        font-size: 1.2rem;
+        /* Adjusted font size for labels */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        /* Reduced space between form fields */
+    }
+
+
+
+    .form-group label {
+        margin-bottom: 10px;
+        /* Adds 20px of space below the label */
+        font-size: 1.2rem;
+        /* Ensures the label text is readable */
+        color: #787c85;
+        /* Keeps the label color consistent */
+        font-family: var(--primary-font);
+        /* Ensures consistent font */
+        font-weight: 900;
+        /* Keeps the label bold */
+        display: block;
+        /* Ensures the label stays above the input */
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+        /* Reduced font size for better fit */
+    }
+
+    .submit-btn {
+        padding: 10px;
+        /* Maintain padding */
+        font-size: 16px;
+        /* Reduced font size for button */
+    }
+
+
+    /* Program Section Styles */
+    .program-main-section {
+        padding: 3.5rem 0;
+        /* Adjusted padding for medium screens */
+        margin-top: 25px;
+        /* Increased margin top */
+    }
+
+    .program-heading-texts {
+        width: 85%;
+        /* More width for medium screens */
+        margin-bottom: 2.2rem;
+        /* Slightly increased margin */
+    }
+
+    .program-heading-texts h1 {
+        font-size: 2.3rem;
+        /* Increased heading size */
+        margin-bottom: 1.8rem;
+        /* More space below heading */
+    }
+
+    /* Program Cards Section */
+    .program-cards {
+        display: flex;
+        /* Enable flexbox */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        /* Center cards */
+        gap: 1.8rem;
+        /* Adjusted gap between cards */
+        padding: 1.5rem;
+        /* Padding for the card container */
+    }
+
+    .program-card {
+        width: calc(50% - 1.8rem);
+        /* Two cards per row */
+        max-width: 340px;
+        /* Limit max width */
+        height: 460px;
+        /* Adjust height */
+        border-radius: 20px;
+        /* Smaller border radius */
+        margin: 0;
+        /* Remove auto margin */
+        transition: transform 0.3s ease;
+        /* Add transition for hover effect */
+    }
+
+    .program-card:hover {
+        transform: translateY(-5px);
+        /* Slight lift on hover */
+    }
+
+    .program-card-img {
+        height: 210px;
+        /* Adjust image height */
+    }
+
+    .program-card-text h3 {
+        font-size: 1.4rem;
+        /* Smaller font size for headings */
+    }
+
+    .program-card-text p {
+        font-size: 0.95rem;
+        /* Smaller font size for paragraphs */
+        line-height: 1.5;
+        /* Adjust line height */
+    }
+
+
+    /* why choose section */
+
+    #why-choose {
+        padding: 3rem 0;
+        /* Increased padding for medium screens */
+    }
+
+    .why-choose-main-section {
+        flex-direction: column;
+        /* Stack the image and text */
+        align-items: center;
+        /* Center align content */
+    }
+
+    .why-choose-img {
+        width: 90%;
+        /* Full width for smaller screens */
+        max-width: 500px;
+        /* Limit max width */
+        padding: 0.5rem;
+        /* Reduced padding */
+        background-color: white;
+        /* Maintain background color */
+        border: 2px dashed #fa9db7;
+        /* Keep border */
+        border-radius: 25px;
+        /* Smaller border radius */
+        margin-bottom: 1rem;
+        /* Space below image */
+    }
+
+    .why-choose-text {
+        width: 90%;
+        /* Full width for text */
+        padding: 1rem;
+        /* Maintain padding */
+        text-align: center;
+        /* Center text */
+    }
+
+    .why-choose-text h1 {
+        font-size: 2.5rem;
+        /* Smaller heading size */
+        margin-bottom: 1.2rem;
+        /* Adjusted space below heading */
+    }
+
+    .why-choose-text p {
+        font-size: 18px;
+        /* Smaller font size for paragraphs */
+        line-height: 1.6;
+        /* Adjust line height */
+        margin-bottom: 2rem;
+        /* Adjusted margin */
+    }
+
+    .why-choose-btn {
+        width: 300px;
+        /* Adjusted button width */
+        padding: 0.3rem;
+        /* Reduced padding */
+        font-size: 1rem;
+        /* Smaller font size */
+        margin: auto;
+    }
+
+    .why-choose-wave-img {
+        top: -7%;
+        /* Adjusted position for better visibility */
+        z-index: 0;
+        /* Ensure it's behind other content */
+    }
+
+    .why-choose-wave-img img {
+        width: 100%;
+        /* Maintain full width */
+        height: auto;
+        /* Keep aspect ratio */
+    }
+
+    /* numbers section */
+
+    #numbers {
+        padding: 4rem 0;
+        /* Adjust padding for medium screens */
+        background-color: #88d4f2;
+        /* Maintain the background color */
+    }
+
+    .numbers-wave-img-up {
+        top: -10%;
+        /* Adjust position for better visibility */
+        z-index: 1;
+        /* Ensure it stays behind the content */
+    }
+
+    .numbers-wave-img-down {
+        bottom: -15%;
+        /* Adjust position for better visibility */
+        z-index: 1;
+        /* Ensure it stays behind the content */
+    }
+
+    .numbers-main-container {
+        flex-direction: column;
+        /* Ensure vertical alignment */
+        text-align: center;
+        /* Center text */
+    }
+
+    .enroll-section h1 {
+        font-size: 3rem;
+        /* Adjust font size for medium screens */
+        line-height: 1.4;
+        /* Adjust line height for better readability */
+    }
+
+    .enroll-btn {
+        margin-top: 1rem;
+        /* Maintain margin */
+        padding: 0.5rem;
+        /* Adjust padding */
+        border-radius: 29px;
+        /* Maintain border radius */
+        background-color: white;
+        /* Maintain background color */
+        transition: all 0.3s ease;
+        /* Maintain transition */
+        font-family: var(--primary-font);
+        /* Maintain font */
+        font-weight: 900;
+        /* Maintain font weight */
+        color: #45b3df;
+        /* Change font color */
+        font-size: 18px;
+        /* Adjust font size for better visibility */
+    }
+
+    .enroll-btn .apply-btn {
+        width: 250px;
+        font-size: 18px;
+        /* Adjust button font size */
+        background-color: white;
+        /* Maintain background color */
+        color: #45b3df;
+        /* Maintain font color */
+        outline: 2px dashed #45b3df;
+        /* Maintain outline */
+    }
+
+
+    /* offering section */
+
+    #offering-section {
+        padding: 4rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .offering-heading-text {
+        width: 80%;
+        /* Increase width for better alignment */
+    }
+
+    .offering-heading-text h1 {
+        font-size: 2.5rem;
+        /* Reduce font size for headings */
+        margin-top: 2rem;
+        /* Adjust margin for better spacing */
+    }
+
+    .offering-heading-text p {
+        font-size: 16px;
+        /* Adjust font size for paragraph */
+        width: 85%;
+        margin: auto;
+    }
+
+    .offering-main-section {
+        gap: 1.5rem;
+        /* Reduce gap between cards */
+    }
+
+    .offering-card {
+        flex: 1 1 calc(50% - 1rem);
+        /* Adjust card width for medium screens */
+        padding: 1rem;
+        /* Adjust padding for cards */
+    }
+
+    .card-texts h2 {
+        font-size: 1.4rem;
+        /* Adjust heading font size in cards */
+    }
+
+    .card-texts p {
+        font-size: 1rem;
+        /* Adjust paragraph font size in cards */
+    }
+
+
+    /* gallery section */
+
+    #gallery {
+        padding: 4rem 20px;
+        /* Adjust padding for medium screens */
+    }
+
+    .gallery-header-text h1 {
+        font-size: 2.5rem;
+        /* Reduce font size for headings */
+        margin-top: 2rem;
+        /* Adjust margin for better spacing */
+        width: 80%;
+        /* Increase width for better alignment */
+    }
+
+    .gallery-images {
+        gap: 1rem;
+        /* Reduce gap between images */
+    }
+
+    .gallery-img {
+        flex: 0 0 calc(50% - 0.5rem);
+        /* Adjust width to display two images per row */
+    }
+
+    .gallery-img img {
+        border-radius: 25px;
+        /* Reduce border radius for images */
+    }
+
+    .gallery-img::before {
+        border-radius: 25px;
+        /* Adjust border radius for dashed border */
+    }
+
+
+    /* features section */
+
+    #features-section {
+        padding: 3rem 0;
+        /* Adjust padding for medium screens */
+    }
+
+    .features {
+        justify-content: center;
+        /* Center align features on smaller screens */
+    }
+
+    .feature-box {
+        width: 300px;
+        /* Reduce width of feature boxes */
+        padding: 1.5rem;
+        /* Adjust padding for feature boxes */
+    }
+
+    .feature-text h3 {
+        font-size: 1.3rem;
+        /* Reduce heading font size */
+    }
+
+    .feature-text p {
+        font-size: 0.8rem;
+        /* Reduce paragraph font size */
+    }
+
+    .feature-icon {
+        width: 40px;
+        /* Reduce icon size */
+        height: 40px;
+        /* Reduce icon size */
+    }
+
+    .feature-icon i {
+        font-size: 1.8rem;
+        /* Reduce icon font size */
+    }
+
+    .feature-cloud-4 {
+        width: 150px;
+        /* Adjust cloud size */
+        left: -5%;
+        /* Adjust position */
+        bottom: 20%;
+        /* Adjust position */
+    }
+
+    .feature-cloud-5 {
+        width: 150px;
+        /* Adjust cloud size */
+        right: -15%;
+        /* Adjust position */
+        bottom: 5%;
+        /* Adjust position */
+    }
+
+    .features-section-img-upwave img,
+    .features-section-img-downwave img {
+        height: auto;
+        /* Ensure images retain aspect ratio */
+    }
+
+    .features-section-img-upwave {
+        top: -7%;
+        /* Adjust position to fit better */
+    }
+
+    .features-section-img-downwave {
+        bottom: -10%;
+        /* Adjust position to fit better */
+    }
+
+    /* testimonials section */
+
+    #testimonial-section {
+        padding: 4rem 20px;
+        /* Reduce padding for smaller screens */
+        margin-top: 0;
+    }
+
+    .testimonial-header-text h1 {
+        font-size: 2.5rem;
+        /* Adjust header font size */
+        text-align: left;
+        /* Center-align text for better visual appeal */
+    }
+
+    .testimonials-details p {
+        font-size: 1rem;
+        /* Decrease font size for details */
+        width: 100%;
+        /* Allow full width for the paragraph */
+        text-align: left;
+        /* Center-align text */
+    }
+
+    .testimonials-points {
+        flex-direction: column;
+        /* Stack points vertically */
+        gap: 1.5rem;
+        /* Reduce gap for smaller screens */
+    }
+
+    .testimonial-block {
+        justify-content: center;
+        /* Center-align blocks */
+        text-align: center;
+        /* Center-align text in blocks */
+    }
+
+    .block-point-img {
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 0.5rem;
+        /* Add bottom margin for spacing */
+    }
+
+    .block-point-img img {
+        width: 25px;
+        /* Adjust icon size */
+    }
+
+    .block-point-text h2 {
+        font-size: 1.4rem;
+        /* Adjust text size for better readability */
+    }
+
+
+    /* parents section */
+
+    #parents-section {
+        padding: 4rem 0;
+        /* Adjust padding for medium screens */
+    }
+
+    .parents-section-heading-text h1 {
+        font-size: 2.5rem;
+        /* Slightly smaller font size */
+    }
+
+    .parents-section-details {
+        width: 70%;
+        /* Increase width for better spacing */
+    }
+
+    .parents-section-texts p {
+        font-size: 1rem;
+        /* Smaller font size */
+    }
+
+    .carousel-items-section {
+        margin-top: 2rem;
+        /* Adjust margin */
+    }
+
+    .carousel-cards {
+        flex: 0 0 calc(100% / 2);
+        /* Two cards per view on medium screens */
+        padding: 15px;
+        /* Adjust padding */
+    }
+
+    .parents-details {
+        margin-top: 8px;
+        /* Reduce margin */
+    }
+
+    .parents-img {
+        width: 60px;
+        /* Smaller image size */
+        height: 60px;
+        /* Maintain aspect ratio */
+    }
+
+    .showing-content {
+        padding: 25px;
+        /* Adjust padding */
+    }
+
+    .showing-content p {
+        font-size: 1.1rem;
+        /* Smaller text size */
+        line-height: 1.5;
+        /* Adjust line-height */
+
+
+    }
+
+
+
+    /* Arrows */
+    .wrapper i {
+        font-size: 1.2rem;
+        /* Adjust arrow size */
+        height: 35px;
+        /* Adjust height */
+        width: 35px;
+        /* Adjust width */
+        line-height: 37px;
+    }
+
+    /* Cards */
+    .card {
+        padding-bottom: 10px;
+        /* Adjust padding for cards */
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+
+
+    /* cta section */
+
+    #cta-section {
+        padding: 3rem 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .cta-main-section-container {
+        flex-direction: column;
+        /* Keep it column for better alignment */
+        padding: 0 1rem;
+        /* Add some padding to the sides */
+    }
+
+    .enroll-section h1 {
+        font-size: 2.7rem;
+        /* Reduce font size for headings */
+    }
+
+    .enroll-btn {
+        margin-top: 1rem;
+
+        border-radius: 25px;
+        /* Slightly smaller border radius */
+    }
+
+    .enroll-btn .apply-btn {
+        font-size: 18px;
+        /* Adjust font size of the button */
+        padding: 0.8rem 1.5rem;
+        /* Add some padding */
+    }
+
+    .cta-section-img-wave {
+        top: -15%;
+        /* Adjust positioning */
+    }
+
+    .cta-section-wave-down {
+        bottom: -15%;
+        /* Adjust positioning */
+    }
+
+    /* recent news section */
+
+    #recent-news-section {
+        padding: 3rem 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .news-section-header-text h1 {
+        font-size: 2.5rem;
+        /* Slightly reduce font size for the header */
+        margin-bottom: 2rem;
+        /* Adjust margin for better spacing */
+    }
+
+    .news-section-cards {
+        flex-direction: column;
+        /* Stack cards vertically on smaller screens */
+        align-items: center;
+        /* Center align the cards */
+    }
+
+    .news-card {
+        flex: 1 1 100%;
+        /* Full width for cards */
+        max-width: 80%;
+        /* Ensure max width is 100% */
+        margin-bottom: 20px;
+        /* Add margin between cards */
+        border-radius: 20px;
+    }
+
+    .news-card-heading h1 {
+        font-size: 1.7rem;
+        /* Adjust font size for card headings */
+    }
+
+    .news-card-heading p {
+        font-size: 1.08rem;
+        /* Adjust font size for card descriptions */
+    }
+
+    .date-section {
+        top: 15px;
+        /* Adjust positioning for the date section */
+        right: 15px;
+        /* Move the date section closer */
+    }
+
+    .date-section p {
+        font-size: 0.9rem;
+        /* Adjust font size for the date */
+    }
+
+    /* footer section */
+
+    .footer-main-container {
+        flex-direction: column;
+        /* Stack columns vertically */
+        align-items: center;
+        /* Center align items */
+
+        width: 85%;
+    }
+
+    .footer-about-section,
+    .footer-contact,
+    .footer-meeting-time {
+        flex: 1 1 100%;
+        /* Each section takes full width */
+        max-width: 100%;
+        /* Ensure max width is full */
+        margin-bottom: 20px;
+        /* Add space between sections */
+        text-align: center;
+        /* Center the text */
+    }
+
+    .footer-about-section .footer-logo img {
+        width: 150px;
+        /* Adjust logo size for smaller screens */
+    }
+
+    .footer-about-text p {
+        font-size: 1rem;
+        /* Adjust font size for readability */
+    }
+
+    .footer-contact h2,
+    .footer-meeting-time h1 {
+        font-size: 1.2rem;
+        /* Maintain heading size */
+    }
+
+    .footer-contact-address,
+    .footer-contact-phone,
+    .footer-contact-email {
+        justify-content: center;
+        /* Center the items */
+    }
+
+    .footer-contact i {
+        font-size: 1.2rem;
+        /* Adjust icon size */
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem;
+        /* Maintain font size for contact info */
+        text-align: center;
+        /* Center align contact info */
+    }
+
+    .meeting-time-container {
+        padding: 1rem 0;
+        /* Adjust padding for meeting time */
+        background-color: #45b3df;
+        border-radius: 15px;
+        /* Adjust border radius */
+        width: 400px;
+    }
+
+    .meeting-time-item {
+        justify-content: center;
+        /* Center align meeting times */
+    }
+
+    .meeting-day {
+        width: auto;
+        /* Allow width to auto adjust */
+        margin-right: 5px;
+        /* Maintain margin */
+    }
+
+    .footer-section-cat {
+        width: 150px;
+        /* Adjust size of the cat image */
+        bottom: -2%;
+        /* Adjust position */
+        left: 10%;
+    }
+
+    .footer-section-star {
+        width: 100px;
+        /* Adjust size of the star image */
+        top: 0;
+        /* Adjust position */
+        right: -10%;
+        /* Adjust position */
+    }
+
+    .footer-section-star img {
+        width: 100%;
+        /* Keep star image responsive */
+    }
+
+}
+
+
+/* Navbar styles for mobile */
+@media (max-width: 600px) {
+
+
+
+
+
+    nav {
+        position: sticky;
+        /* Sticky positioning */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+
+        padding-inline: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        /* Hide off-screen initially */
+        height: 100vh;
+        width: 70%;
+        /* Adjust as needed */
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        /* Smooth transition for slide-in effect */
+        z-index: 999;
+        /* Ensure it is above other content */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        /* Add some spacing between links */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger on mobile */
+    }
+
+    .nav-active {
+        left: 0;
+        /* Slide in */
+    }
+
+    /* Show close icon when menu is active */
+    .nav-active .close-icon {
+        display: block;
+        /* Show close icon */
+    }
+
+    /* Hide hamburger icon when menu is active */
+    .nav-active .hamburger {
+        display: none;
+        /* Hide hamburger icon */
+    }
+
+    .nav-apply-btn {
+        position: fixed;
+        /* Fix position */
+        bottom: 20px;
+        /* Distance from the bottom */
+        right: 20px;
+        /* Distance from the right */
+        z-index: 1001;
+        /* Ensure it is above other content */
+        width: calc(100% - 40px);
+        /* Adjust width if necessary */
+    }
+
+    .apply-btn {
+        width: 100%;
+        /* Make the button full-width on mobile */
+    }
+
+
+
+    /* header section */
+
+    header {
+        height: 100vh;
+        /* Full-screen height on mobile */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .header-text {
+        width: 85%;
+        /* Adjust width for mobile screens */
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        /* Center align text for mobile */
+    }
+
+    .header-text h3 {
+        font-size: 30px;
+        /* Smaller text size */
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .header-text h1 {
+        font-size: 3rem;
+        /* Adjust heading size */
+    }
+
+    .header-text p {
+        font-size: 1rem;
+        /* Smaller paragraph text */
+        width: 100%;
+        /* Full width on mobile */
+        line-height: 1.5;
+        /* Adjust line height for readability */
+    }
+
+    .header-text button {
+        padding: 0.8rem 1.7rem;
+        /* Adjust button size */
+        font-size: 18px;
+        /* Smaller button text */
+        margin-top: 1.5rem;
+    }
+
+    .cycle-img-container {
+        display: none;
+        /* Hide the cycle images on small screens to save space */
+    }
+
+    .header-wave {
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    /* about school */
+
+    #about-school {
+        padding: 20px 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .about-main-section-heading {
+        flex-direction: column;
+        /* Stack the left and right sections vertically */
+        align-items: center;
+        /* Center align the content */
+    }
+
+    /* Left Text Info Styles */
+    .left-text-info {
+        width: 100%;
+        /* Full width on mobile */
+        padding: 10px;
+        /* Reduce padding */
+        text-align: center;
+        /* Center the text for better alignment on small screens */
+    }
+
+    .about-section-heading h1 {
+        font-size: 2rem;
+        /* Reduce the heading size */
+    }
+
+    .name-desc {
+        width: 95%;
+        margin: auto;
+        font-size: 0.9rem;
+        /* Smaller font size for description */
+        line-height: 1.4;
+        /* Adjust line height */
+    }
+
+    /* Right Text Info Styles */
+    .right-text-info {
+        width: 100%;
+        /* Full width for form section */
+        padding: 20px;
+        /* Reduce padding */
+        margin-top: 20px;
+        /* Add spacing between the sections */
+    }
+
+    .right-text-info h2 {
+        font-size: 1.8rem;
+        /* Reduce the heading size for the form */
+        text-align: center;
+        /* Center align the form heading */
+
+    }
+
+    /* Admission Form Styles */
+    .admission-form {
+        flex-direction: column;
+        /* Stack form elements vertically */
+        width: 100%;
+        /* Full width for the form */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        /* Reduce margin between form fields */
+    }
+
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 16px;
+        /* Smaller font size for form fields */
+        padding: 10px;
+        /* Reduce padding */
+    }
+
+    .submit-btn {
+        padding: 8px;
+        /* Adjust button size */
+        font-size: 16px;
+        /* Slightly smaller text size for the button */
+    }
+
+    /* Adjust highlight text styling */
+    .highlight-pink::before,
+    .highlight-yellow::before {
+        left: -5px;
+        right: -5px;
+        height: 40%;
+        /* Reduce the height of the background highlight */
+    }
+
+    .name-desc {
+        font-size: 1rem;
+        /* Slightly smaller font size */
+        line-height: 1.6;
+        /* Adjust line height */
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        /* Adds 20px of space below the label */
+        font-size: 1.1rem;
+        /* Ensures the label text is readable */
+        color: #787c85;
+        /* Keeps the label color consistent */
+        font-family: var(--primary-font);
+        /* Ensures consistent font */
+        font-weight: 900;
+        /* Keeps the label bold */
+        display: block;
+        /* Ensures the label stays above the input */
+    }
+
+
+    /* programs section */
+
+    .program-main-section {
+        padding: 2rem 0;
+        /* Adjust the padding */
+    }
+
+    .program-heading-texts {
+        width: 90%;
+        /* Full width for smaller screens */
+        margin-bottom: 2rem;
+        /* Reduced margin */
+    }
+
+    .program-heading-texts h1 {
+        font-size: 2rem;
+        /* Smaller heading */
+        margin-bottom: 1.5rem;
+        /* Less space below heading */
+    }
+
+    /* Program Cards Section */
+    .program-cards {
+        flex-direction: column;
+        /* Stack cards vertically */
+        gap: 1.5rem;
+        /* Reduce gap between cards */
+        padding: 1rem;
+        /* Less padding */
+    }
+
+    .program-card {
+        width: 90%;
+        /* Full width for mobile */
+        height: 450px;
+        /* Adjust height to content */
+        border-radius: 20px;
+        /* Smaller border radius */
+        margin: auto;
+
+    }
+
+    .program-card-img {
+        height: 220px;
+        /* Smaller image height */
+    }
+
+
+
+    .program-card-text h3 {
+        font-size: 1.3rem;
+        /* Smaller font size for headings */
+    }
+
+    .program-card-text p {
+        font-size: 1rem;
+        /* Smaller font size for paragraphs */
+        line-height: 1.6;
+        /* Adjust line height */
+    }
+
+    /* why choose section */
+
+    #why-choose {
+        padding-inline: 20px;
+        /* Adjust padding */
+        padding-bottom: 4rem;
+    }
+
+    .why-choose-main-section {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center align items */
+        gap: 1.5rem;
+        /* Reduced gap for mobile */
+        padding-block: 10px;
+    }
+
+    .why-choose-img {
+        width: 90%;
+        /* Full width for images */
+        padding: 0.5rem;
+        /* Adjusted padding */
+        border: 2px dashed #fa9db7;
+        /* Keep the dashed border */
+        border-radius: 20px;
+        /* Reduced border radius for mobile */
+    }
+
+    .why-choose-img img {
+        border-radius: 20px;
+        /* Maintain border radius for images */
+        width: 100%;
+        /* Full width for images */
+        height: auto;
+        /* Ensure the image maintains its aspect ratio */
+    }
+
+    .why-choose-text {
+        width: 100%;
+        /* Full width for text */
+        padding: 0 1rem;
+        /* Add horizontal padding */
+    }
+
+    .why-choose-text h1 {
+        font-size: 2rem;
+        /* Smaller font size for the heading */
+        margin-bottom: 0.5rem;
+        /* Reduced margin below heading */
+    }
+
+    .why-choose-text p {
+        margin-block: 1.5rem;
+        /* Reduced margin for paragraphs */
+        font-size: 15px;
+        /* Smaller font size for paragraphs */
+    }
+
+    .why-choose-btn {
+        width: auto;
+        /* Allow button to fit content */
+        padding: 0.4rem 1rem;
+        /* Adjust padding */
+        font-size: 14px;
+        /* Smaller font size for button text */
+    }
+
+    .highlight-pink-choose,
+    .highlight-yellow-choose {
+        font-size: 1.8rem;
+        /* Smaller font size for highlights */
+    }
+
+    .why-choose-wave-img {
+        top: -5%;
+        /* Adjust wave image position */
+    }
+
+    .why-choose-btn {
+        margin-top: 1.5rem;
+        /* Add space above the button */
+        padding: 0.21rem;
+        width: 165px;
+        /* Set your desired width */
+    }
+
+    .apply-btn {
+        width: 100%;
+        /* Make the button fill the width of its container */
+        padding: 0.6rem;
+        /* Padding for the button */
+        font-size: 1rem;
+        /* Adjust font size if needed */
+
+    }
+
+    .why-choose-text p {
+        font-size: 1.1rem;
+
+
+    }
+
+
+
+    /* numbers section */
+    #numbers {
+        padding: 3rem 20px;
+        /* Adjust padding for mobile */
+    }
+
+    .enroll-section h1 {
+        font-size: 2.4rem;
+        /* Decrease font size for headings */
+    }
+
+    .enroll-btn {
+        margin-top: 1rem;
+        width: 50%;
+        /* Make button fill the container */
+        padding: 0.5rem;
+        /* Increase padding for better touch target */
+    }
+
+    .enroll-btn .apply-btn {
+        font-size: 18px;
+        /* Adjust font size for button */
+        padding: 0.7rem;
+        /* Adjust padding */
+
+        outline: 2px dashed;
+        /* Remove outline */
+        width: 100%;
+        /* Make button fill the parent */
+    }
+
+    .numbers-wave-img-up,
+    .numbers-wave-img-down {
+        display: none;
+    }
+
+    .number-text-group {
+        flex-direction: column;
+        /* Stack numbers vertically */
+        align-items: center;
+        /* Center items */
+    }
+
+    .number-text {
+        width: auto;
+        /* Allow text to be flexible */
+        margin-bottom: 1rem;
+        /* Add spacing between text elements */
+    }
+
+
+
+    /* offering section */
+
+    #offering-section {
+        padding: 1rem 20px 2rem;
+        /* Reduce padding for mobile */
+    }
+
+    .offering-heading-text {
+        width: 90%;
+        /* Increase width to take more space on mobile */
+    }
+
+    .offering-heading-text h1 {
+
+        margin-top: 1.5rem;
+        /* Adjust margin for better spacing */
+    }
+
+    .offering-heading-text span {
+        font-size: 2.1rem;
+        /* Decrease font size for headings */
+    }
+
+    .offering-heading-text p {
+        font-size: 1rem;
+    }
+
+    .offering-main-section {
+        flex-direction: column;
+        /* Stack cards vertically on mobile */
+        align-items: flex-start;
+        /* Align cards to the left */
+        gap: 0rem;
+        /* Reduce gap between cards */
+        margin-left: 0;
+        /* Reset any left margin */
+    }
+
+    .offering-card {
+        flex: 1 1 100%;
+        /* Make each card take full width */
+        flex-direction: column;
+        /* Stack image and text vertically */
+        align-items: flex-start;
+        /* Align card content to the left */
+        padding: 1rem;
+        /* Adjust padding for better touch targets */
+        box-shadow: none;
+    }
+
+    .card-img {
+        margin: 0 0 1rem 0;
+        /* Remove right margin and add bottom margin */
+    }
+
+    .card-texts {
+        width: 100%;
+        /* Allow text to take full width */
+        text-align: left;
+        /* Align text to the left */
+    }
+
+    .card-texts h2 {
+        font-size: 1.8rem;
+        /* Decrease heading font size */
+    }
+
+    .card-texts p {
+        font-size: 1.1rem;
+        /* Decrease paragraph font size */
+    }
+
+
+    /* gallery section */
+
+
+    #gallery {
+        padding: 3rem 20px;
+        /* Reduce padding for mobile */
+        background-color: #fcf9f4;
+        /* Keep the same background */
+
+    }
+
+    .gallery-header-text h1 {
+        font-size: 2.5rem;
+        /* Decrease font size for mobile */
+        margin-bottom: 2rem;
+        /* Adjust margin for spacing */
+        width: 100%;
+        /* Allow for more width on mobile */
+        margin: auto;
+        /* Center align */
+        text-align: center;
+    }
+
+    .gallery-header-text h1 span {
+        text-align: center;
+    }
+
+
+    .gallery-images {
+        flex-direction: column;
+        /* Stack images vertically on mobile */
+        align-items: center;
+        /* Center images */
+        gap: 1rem;
+        /* Adjust gap between images */
+
+
+    }
+
+    .gallery-img {
+        flex: 0 0 100%;
+        /* Make each image take full width */
+        margin-bottom: 1rem;
+        /* Adjust margin below each image */
+
+        width: 90%;
+        /* Adjust width for mobile */
+    }
+
+    .gallery-img img {
+        border-radius: 20px;
+        /* Slightly decrease border radius for mobile */
+    }
+
+    .gallery-img::before {
+        border: 2px dashed #fa9db7;
+        /* Keep border style */
+        border-radius: 20px;
+        /* Match border radius with the image */
+    }
+
+    .gallery-section-wave-img {
+        top: -1.3%;
+        /* Adjust wave position for mobile */
+    }
+
+    .gallery-section-wave-img img {
+        width: 100%;
+        height: auto;
+        /* Keep it responsive */
+    }
+
+
+    /* features section */
+
+    #features-section {
+        padding: 5.5rem 20px;
+        /* Reduce padding for mobile */
+        background-color: #ffdd98;
+        /* Keep the same background */
+        margin-top: 0;
+    }
+
+    .features {
+        flex-direction: column;
+        /* Stack feature boxes vertically */
+        align-items: center;
+        /* Center align feature boxes */
+        gap: 2rem;
+        /* Adjust gap between feature boxes */
+    }
+
+    .feature-box {
+        width: 350px;
+        padding: 1.5rem;
+        /* Adjust padding for mobile */
+        text-align: left;
+        /* Align text to the left */
+        outline-offset: -10px;
+        /* Adjust outline offset */
+        display: flex;
+        /* Use flexbox for alignment */
+        align-items: center;
+        /* Align items vertically */
+        margin: 0 auto;
+        /* Center the feature box */
+    }
+
+    .feature-icon {
+        width: 50px;
+        /* Increase icon size */
+        height: 50px;
+        /* Increase icon size */
+        margin-right: 1rem;
+        /* Adjust margin for spacing */
+    }
+
+    .feature-text {
+        flex: 1;
+        /* Allow text to take remaining space */
+    }
+
+    .feature-text h3 {
+        font-size: 1.5rem;
+        /* Decrease font size for headings */
+        margin: 0;
+        /* Remove margin for better alignment */
+    }
+
+    .feature-text p {
+        font-size: 1.1rem;
+        /* Decrease font size for paragraphs */
+    }
+
+    .features-section-img-upwave {
+        top: -2%;
+        /* Adjust wave position for mobile */
+
+    }
+
+    .features-section-img-downwave {
+        bottom: -3%;
+        /* Adjust wave position for mobile */
+    }
+
+    .feature-cloud-4 {
+        width: 150px;
+        /* Adjust cloud size for mobile */
+        left: -10%;
+        /* Adjust position */
+        bottom: 80%;
+        /* Adjust position */
+    }
+
+    .feature-cloud-5 {
+        width: 150px;
+        /* Adjust cloud size for mobile */
+        right: -10%;
+        /* Adjust position */
+        bottom: -10%;
+        /* Adjust position */
+    }
+
+
+    /* testimonial section */
+
+    #testimonial-section {
+        padding: 4.5rem 0;
+        /* Adjust padding for mobile */
+        background-position: center center;
+        margin-top: 0;
+
+    }
+
+    .testimonial-texts {
+        width: 85%;
+        /* Reduce width for smaller screens */
+        margin: 0 auto;
+        /* Center the text block */
+        background-color: rgba(255, 255, 255, 0.8);
+        /* White background with slight transparency */
+        padding: 1.5rem;
+        /* Adjust padding for mobile */
+        border-radius: 15px;
+        /* Optional: add rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Optional: add shadow for depth */
+    }
+
+    .testimonial-header-text,
+    .testimonials-details,
+    .testimonials-points {
+        text-align: left;
+        /* Left align text */
+    }
+
+    .testimonial-header-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for mobile */
+    }
+
+    .testimonials-details p {
+        font-size: 1.1rem;
+        /* Reduce font size for mobile */
+        line-height: 1.5;
+        /* Adjust line height */
+        width: 100%;
+        /* Use full width */
+        margin: 0;
+        /* Remove margin for better alignment */
+    }
+
+    .testimonials-points {
+        flex-direction: column;
+        /* Stack points vertically on mobile */
+        gap: 1.5rem;
+        /* Adjust gap between points */
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-block {
+        justify-content: flex-start;
+        /* Keep alignment */
+    }
+
+    .block-point-img {
+        margin-right: 0.5rem;
+        /* Adjust margin for mobile */
+        width: 25px;
+        /* Reduce image width */
+    }
+
+
+    /* parents section */
+
+    #parents-section {
+        padding: 3rem 20px;
+        /* Adjust padding for mobile */
+    }
+
+
+    .parents-section-heading-text h1 {
+        font-size: 2rem;
+        /* Reduce font size for mobile */
+        margin-bottom: 1.5rem;
+        /* Adjust margin */
+
+    }
+
+    .parents-section-heading-text h1 span {
+        font-size: 2rem;
+    }
+
+    .parents-section-heading-text {
+        width: 500px;
+        /* Set a fixed width */
+        margin: 0 auto;
+        /* Center horizontally */
+        text-align: center;
+        /* Center text within the div */
+    }
+
+    .parents-section-heading-text span {
+        font-size: 2rem;
+
+    }
+
+    .parents-section-texts p {
+        font-size: 1.1rem;
+        /* Reduce font size for mobile */
+        line-height: 1.5;
+        /* Adjust line height */
+        color: #787c85;
+        /* Maintain color consistency */
+        margin: 0 10px;
+        /* Add some horizontal margin */
+    }
+
+    .carousel-items-section {
+        margin-top: 1.5rem;
+        /* Reduce margin on top */
+        position: relative;
+        /* Maintain relative positioning for buttons */
+        overflow: hidden;
+        /* Hide overflow to show one item */
+        width: 100%;
+        /* Ensure full width */
+    }
+
+    .carousel-items {
+        display: flex;
+        transition: transform 0.5s ease;
+        /* Smooth transition */
+    }
+
+
+    .carousel-cards {
+        flex: 0 0 100%;
+        /* Make each item take full width */
+        margin-right: 1rem;
+        /* Add some space between items */
+    }
+
+
+
+    .showing-content {
+        background-color: #fa9db7;
+        /* Background color for the quote */
+        color: white;
+        /* Text color */
+        padding: 1.5rem;
+        /* Padding around the text */
+        border-radius: 15px;
+        /* Rounded corners */
+    }
+
+    .showing-content p {
+        font-size: 1.1rem;
+        /* Reduce font size for mobile */
+        line-height: 1.5;
+        /* Adjust line height */
+    }
+
+    .parents-details {
+        display: flex;
+        flex-direction: row;
+        /* Keep items in a row */
+        align-items: center;
+        /* Center items vertically */
+        margin-top: 0.5rem;
+        /* Reduce margin for mobile */
+        justify-content: center;
+        /* Center align the details */
+    }
+
+    .parents-text {
+        margin-top: 0.8rem;
+    }
+
+    .parents-img {
+        width: 40px;
+        /* Adjust image size for mobile */
+        height: 40px;
+        /* Adjust height for mobile */
+    }
+
+    .parents-img img {
+        width: 100%;
+        /* Maintain responsiveness */
+        height: 100%;
+        /* Maintain responsiveness */
+        object-fit: cover;
+        /* Ensure images fit well */
+    }
+
+    .carousel-button {
+        padding: 10px;
+        /* Adjust button padding for mobile */
+        width: 40px;
+        /* Adjust width for mobile */
+        height: 40px;
+        /* Adjust height for mobile */
+        background-color: #fad07b;
+        /* Button color */
+        color: white;
+        /* Button text color */
+        border: none;
+        /* Remove default border */
+        border-radius: 50%;
+        /* Round buttons */
+        position: absolute;
+        /* Position buttons */
+        top: 50%;
+        /* Center vertically */
+        transform: translateY(-50%);
+        /* Center adjustment */
+        z-index: 10;
+        /* Ensure buttons are above other elements */
+    }
+
+    .prev-button {
+        left: 5px;
+        /* Adjust left position for mobile */
+    }
+
+    .next-button {
+        right: 5px;
+        /* Adjust right position for mobile */
+    }
+
+    .carousel-button:hover {
+        background-color: #88d4f2;
+        /* Change color on hover */
+    }
+
+
+
+    .parents-section-heading-text {
+        width: 100%;
+        /* Set a fixed width */
+        margin: 0 auto;
+        /* Center horizontally */
+        text-align: center;
+        /* Center text within the div */
+    }
+
+
+    .parents-section-texts {
+        width: 100%;
+        margin: auto;
+    }
+
+    .parents-section-details {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .carousel-cards {
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .parents-wave-img img {
+        display: none;
+    }
+
+
+    /* cta section */
+
+    /* CTA Section */
+    #cta-section {
+        padding: 2rem 20px;
+        margin-top: 0rem;
+    }
+
+    .cta-main-section-container {
+        padding: 0 1rem;
+    }
+
+
+    .enroll-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+
+    .enroll-btn {
+        margin-top: 1rem;
+        font-size: 14px;
+    }
+
+    .enroll-btn .apply-btn {
+        font-size: 18px;
+    }
+
+    .cta-section-img-wave {
+        top: -8%;
+    }
+
+    .cta-section-wave-down {
+        bottom: -15%;
+    }
+
+
+    /* recent news section */
+
+    #recent-news-section {
+        padding: 3rem 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .news-section-header-text h1 {
+        font-size: 2.2rem;
+        /* Adjust font size for header */
+        margin-bottom: 2.3rem;
+        /* Adjust margin bottom */
+    }
+
+    .news-section-cards {
+        flex-direction: column;
+        /* Stack cards vertically */
+        align-items: center;
+        /* Center the cards */
+    }
+
+    .news-card {
+        flex: 1 1 100%;
+        /* Make each card full width */
+        max-width: 95%;
+        /* Ensure max width for cards */
+        margin-bottom: 1.5rem;
+        /* Add some spacing between cards */
+    }
+
+    .news-card-img img {
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .news-card-heading h1 {
+        font-size: 1.5rem;
+        /* Adjust heading font size */
+    }
+
+    .news-card-heading p {
+        font-size: 1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .news-card-heading {
+        padding-top: 0;
+    }
+
+    .date-section {
+        position: static;
+        /* Reset positioning for smaller screens */
+        margin-bottom: 10px;
+        /* Add spacing below the date */
+    }
+
+    .date-section p {
+        font-size: 1rem;
+        /* Adjust font size for date */
+        color: #45b3df;
+        /* Keep the same color */
+    }
+
+
+
+    /* footer */
+
+    footer {
+        padding: 2rem 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .footer-main-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+        gap: 1rem;
+        /* Add space between items */
+    }
+
+    .footer-about-section,
+    .footer-contact,
+    .footer-meeting-time {
+        flex: 1 1 100%;
+        /* Each section takes full width */
+        max-width: 100%;
+        /* Ensure no max-width limit */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .footer-logo img {
+        width: 120px;
+        /* Reduce logo size for mobile */
+        margin-bottom: 1rem;
+        /* Adjust bottom margin */
+    }
+
+    .footer-about-text p {
+        font-size: 0.99rem;
+        /* Adjust font size */
+        line-height: 1.5;
+        /* Adjust line height */
+        padding-bottom: 1rem;
+    }
+
+    .footer-contact h2,
+    .footer-meeting-time h1 {
+        font-size: 1.5rem;
+        /* Increase header size for visibility */
+    }
+
+    .footer-contact-address,
+    .footer-contact-phone,
+    .footer-contact-email {
+        flex-direction: column;
+        /* Stack icons and text */
+        align-items: center;
+        /* Center items */
+        text-align: center;
+        /* Center align text */
+        margin-bottom: 1.3rem;
+        /* Adjust spacing */
+    }
+
+    .footer-contact i {
+        font-size: 1.8rem;
+        /* Maintain icon size */
+    }
+
+    .footer-contact p {
+        font-size: 0.85rem;
+        /* Adjust font size */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .meeting-time-container {
+        padding: 1rem;
+        /* Adjust padding */
+        border-radius: 15px;
+        /* Reduce border radius */
+        width: 100%;
+        /* Adjust width */
+        margin: 0 auto;
+        /* Center container */
+        margin-bottom: 3rem;
+
+    }
+
+    .meeting-time-item {
+        justify-content: center;
+        /* Center items */
+    }
+
+    .footer-section-cat,
+    .footer-section-star {
+        display: none;
+        /* Hide images on mobile for a cleaner look */
+    }
+
+    .footer-section-wave {
+        top: -5%;
+        /* Adjust wave image positioning */
+    }
+
+    .footer-section-wave img {
+        width: 100%;
+        /* Ensure the image covers full width */
+        height: 45px;
+        /* Maintain aspect ratio */
+    }
+
+ 
+}
