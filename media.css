@@ -2230,6 +2230,9 @@
 @media (max-width: 600px) {
 
 
+    .container {
+        padding-inline: 10px;
+    }
 
 
 
@@ -2296,12 +2299,13 @@
         /* Fix position */
         bottom: 20px;
         /* Distance from the bottom */
-        right: 20px;
+        right: 40px;
         /* Distance from the right */
         z-index: 1001;
         /* Ensure it is above other content */
-        width: calc(100% - 40px);
+        width: calc(89% - 30px);
         /* Adjust width if necessary */
+
     }
 
     .apply-btn {
@@ -3425,5 +3429,5 @@
         /* Maintain aspect ratio */
     }
 
- 
+
 }
