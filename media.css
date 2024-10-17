@@ -2229,10 +2229,6 @@
 /* Navbar styles for mobile */
 @media (max-width: 600px) {
 
-
-   
-
-
     nav {
         position: sticky;
         /* Sticky positioning */
@@ -2374,7 +2370,7 @@
     /* about school */
 
     #about-school {
-        padding: 20px 0;
+        padding: 20px 30px;
         /* Reduce padding for smaller screens */
     }
 
@@ -2494,7 +2490,7 @@
     /* programs section */
 
     .program-main-section {
-        padding: 2rem 0;
+        padding: 2rem 30px;
         /* Adjust the padding */
     }
 
@@ -2555,7 +2551,7 @@
     /* why choose section */
 
     #why-choose {
-        padding-inline: 0;
+        padding-inline: 30px;
         /* Adjust padding */
         padding-bottom: 4rem;
     }
@@ -2659,7 +2655,7 @@
 
     /* numbers section */
     #numbers {
-        padding: 3rem 0;
+        padding: 3rem 30px;
         /* Adjust padding for mobile */
     }
 
@@ -2712,7 +2708,7 @@
     /* offering section */
 
     #offering-section {
-        padding: 1rem 0 2rem;
+        padding: 1rem 30px 2rem;
         /* Reduce padding for mobile */
     }
 
@@ -2786,7 +2782,7 @@
 
 
     #gallery {
-        padding: 3rem 0;
+        padding: 3rem 30px;
         /* Reduce padding for mobile */
         background-color: #fcf9f4;
         /* Keep the same background */
@@ -2858,7 +2854,7 @@
     /* features section */
 
     #features-section {
-        padding: 5.5rem 0;
+        padding: 5.5rem 30px;
         /* Reduce padding for mobile */
         background-color: #ffdd98;
         /* Keep the same background */
@@ -2949,7 +2945,7 @@
     /* testimonial section */
 
     #testimonial-section {
-        padding: 4.5rem 0;
+        padding: 4.5rem 30px;
         /* Adjust padding for mobile */
         background-position: center center;
         margin-top: 0;
@@ -3018,7 +3014,7 @@
     /* parents section */
 
     #parents-section {
-        padding: 3rem 0;
+        padding: 3rem 30px;
         /* Adjust padding for mobile */
     }
 
@@ -3218,7 +3214,7 @@
 
     /* CTA Section */
     #cta-section {
-        padding: 2rem 0;
+        padding: 2rem 30px;
         margin-top: 0rem;
     }
 
@@ -3254,7 +3250,7 @@
     /* recent news section */
 
     #recent-news-section {
-        padding: 3rem 0;
+        padding: 3rem 30px;
         /* Reduce padding for smaller screens */
     }
 
@@ -3319,7 +3315,7 @@
     /* footer */
 
     footer {
-        padding: 2rem 0;
+        padding: 2rem 30px;
         /* Adjust padding for smaller screens */
     }
 
@@ -3425,5 +3421,5 @@
         /* Maintain aspect ratio */
     }
 
- 
+
 }
