@@ -3422,4 +3422,31 @@
     }
 
 
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+
+    .carousel-items, .testimonials-details, .parents-section {
+        width: 100%;
+        /* Ensure full width does not exceed the viewport */
+    }
+
+    .carousel-cards, .testimonial-block {
+        margin: 0 auto;
+        padding: 0 10px;
+        /* Adjust margins and padding */
+    }
+    
+    .carousel-button, .cta-section-wave, .footer-section-wave {
+        left: 0;
+        right: 0;
+        /* Ensure buttons and waves stay within viewport */
+    }
+    
+
 }
